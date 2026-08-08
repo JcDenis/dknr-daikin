@@ -1,7 +1,7 @@
 {
     "name": "dknr-daikin",
     "description": "DKNR Daikin",
-    "version": "0.0.1",
+    "version": "0.6",
     "dependencies": {
         "@flowfuse/node-red-dashboard": "1.30.2",
         "node-red-node-serialport": "2.0.3"
