@@ -13,11 +13,11 @@ RUN usermod -aG dialout node-red
 
 # Set environment variables
 ENV DKNR_USERNAME=admin \
-	DKNR_PASSWORD=admin \
-	DKNR_SECRET=dkteleinfo \
-    DKNR_REPOSITORY=https://github.com/JcDenis/dknr-daikin \
-    NODE_RED_ENABLE_PROJECTS=true \
-	TZ=Europe\Paris
+      DKNR_PASSWORD=admin \
+      DKNR_SECRET=dkdaikin \
+      DKNR_REPOSITORY=https://github.com/JcDenis/dknr-daikin \
+      NODE_RED_ENABLE_PROJECTS=true \
+      TZ=Europe\Paris
 
 # Image label
 LABEL org.opencontainers.image.authors="Jean-Christian Paul Denis" \
