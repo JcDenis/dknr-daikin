@@ -22,7 +22,7 @@
             "e121bb6441bf21e5"
         ],
         "x": 94,
-        "y": 459,
+        "y": 399,
         "w": 342,
         "h": 82
     },
@@ -38,11 +38,13 @@
         },
         "nodes": [
             "123b4b73d0bba710",
-            "92c098c716e46e3b"
+            "92c098c716e46e3b",
+            "4aac7381bb46e6de",
+            "6ffe0e37a8586c4d"
         ],
         "x": 94,
         "y": 99,
-        "w": 262,
+        "w": 602,
         "h": 82
     },
     {
@@ -64,7 +66,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 84,
-        "y": 939,
+        "y": 879,
         "w": 912,
         "h": 82
     },
@@ -83,11 +85,12 @@
             "8704b93076a73d7e",
             "b42653048b3f39e8",
             "3fa36de74a10eac1",
-            "f60de1529c423dee"
+            "f60de1529c423dee",
+            "87af7512d96f352e"
         ],
         "x": 84,
-        "y": 579,
-        "w": 482,
+        "y": 519,
+        "w": 582,
         "h": 142
     },
     {
@@ -105,11 +108,12 @@
             "4d3924b9bbe9f64f",
             "f4a2353e5f92576c",
             "feccda160e4e0b98",
-            "adec3f20752be343"
+            "adec3f20752be343",
+            "9a9cf5d3275478fd"
         ],
         "x": 84,
-        "y": 1059,
-        "w": 782,
+        "y": 999,
+        "w": 942,
         "h": 142
     },
     {
@@ -129,7 +133,7 @@
             "289e0a6cd1209c38"
         ],
         "x": 84,
-        "y": 759,
+        "y": 699,
         "w": 352,
         "h": 142
     },
@@ -153,7 +157,7 @@
             "cc497dc76cd10f76"
         ],
         "x": 84,
-        "y": 1239,
+        "y": 1179,
         "w": 1092,
         "h": 82
     },
@@ -169,39 +173,89 @@
         },
         "nodes": [
             "20334854d90a941a",
-            "784624db0d5344ce",
             "909b9a163208e9bb",
             "08fc7aee2fa5b4fb",
-            "3d2fe34ce382b8de",
-            "1ce065ee95e4bc96",
-            "c578d346dcc9f38e",
-            "30827d65144b688f",
-            "da2926c9f2b6bf96",
-            "828410811667cd18",
-            "e3514fce5b36b9b3",
-            "6c341edbdc85864c",
-            "05632f2f980cdf7b",
-            "9ef2d8276441403e",
-            "178f9c11aa525129",
-            "bf68a02f6192ac6f",
-            "3705a36aca89988f",
-            "e3e3929d71c9c4fe",
-            "65ba94b14b81cb29",
-            "e29e8e7d82635b16",
-            "f107521ef584778f",
-            "5afc42fcee50017c",
-            "e16a07c1cd6fcc59",
             "c16c894c47efca58",
-            "92fbc48e79113a2c",
             "8a05731294a1c14f",
             "cea8461aa065a265",
             "8d95de6420a4cea9",
-            "2e42392115e074b9"
+            "2e42392115e074b9",
+            "9c82e7c2cd67e016",
+            "9ed34c6a6b992dd6",
+            "92fbc48e79113a2c",
+            "3017e98818806afa",
+            "f81aaed5b069a001",
+            "fef910d5cdc8f0f0",
+            "80eafa55285410b7",
+            "913a2c3a8e133591",
+            "8d527a2315ce65b6",
+            "b24b443c26470fd4",
+            "ddca86623b0d1a7e",
+            "f808d834753be544",
+            "fcac9ec5cb3d7416",
+            "6ebbaf2a2a07ad30",
+            "9f0054733e85ea10",
+            "8aabae88292ab83c",
+            "0187e89ac292da69",
+            "359152eebac1b453",
+            "5c38a3f37272e23b",
+            "b9aeb493cd3e56a6",
+            "21252b476795410b",
+            "44add1cc83f92f26",
+            "0c4e4e174653d04a",
+            "0d2c3399fe80835d",
+            "ad40d5a450c28085",
+            "2ce30085eedd2547",
+            "a943933b63b4106e",
+            "f4d36ecf9cb14569",
+            "6eee33b3df068f44",
+            "4c668992b8ffc978",
+            "c0d229ae94f5d18f",
+            "0e8828dca7fdbb97",
+            "23efa6e6da620c13",
+            "7852aa45407d07d6",
+            "5e7dcb551e612ae7",
+            "c05a7c0221f1a088",
+            "4b9fc26202746ad7",
+            "3c75056585254baa",
+            "c23295edd6b4be81"
         ],
         "x": 84,
-        "y": 1359,
-        "w": 2922,
-        "h": 382
+        "y": 1299,
+        "w": 2432,
+        "h": 982
+    },
+    {
+        "id": "3dbdfa37c673183e",
+        "type": "group",
+        "z": "4bc72a1112cb448c",
+        "name": "kerne - control",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "786bfd43841bb244",
+            "f721ca03be8ff260",
+            "0f9815dd4369b44e",
+            "f2a95a5b30167059",
+            "1795acd79dcd54ae",
+            "30ee26d5a472661f",
+            "6229854c0f2d5b8e",
+            "0509e5ebe3af8a97",
+            "406e5cbb1883f19b",
+            "792337d4e802e397",
+            "44d1c79d6f5da9d6",
+            "c429ed95db2097e5",
+            "8aacb5803ea8c1be",
+            "22114efbdf7403c0",
+            "55b7e1ee8f2803b9"
+        ],
+        "x": 94,
+        "y": 219,
+        "w": 2092,
+        "h": 142
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -249,7 +303,7 @@
         "ui": "df7710b4b2c4e55b",
         "path": "/",
         "icon": "home",
-        "layout": "flex",
+        "layout": "tabs",
         "theme": "877e716e64a22cf1",
         "breakpoints": [
             {
@@ -340,9 +394,9 @@
     {
         "id": "117d5289b94a0fc6",
         "type": "ui-group",
-        "name": "HVAC",
+        "name": "Détail",
         "page": "f89655b525aee8cd",
-        "width": "3",
+        "width": "6",
         "height": 1,
         "order": 1,
         "showTitle": false,
@@ -350,6 +404,17 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "2adb88b6b6de2ca1",
+        "type": "ui-spacer",
+        "group": "117d5289b94a0fc6",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 17,
+        "width": "6",
+        "height": 1,
+        "className": ""
     },
     {
         "id": "025edbd02daf82d0",
@@ -362,7 +427,7 @@
             "Location": "/dashboard"
         },
         "x": 340,
-        "y": 500,
+        "y": 440,
         "wires": []
     },
     {
@@ -377,7 +442,7 @@
         "skipBodyParsing": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 500,
+        "y": 440,
         "wires": [
             [
                 "025edbd02daf82d0"
@@ -390,7 +455,7 @@
         "z": "4bc72a1112cb448c",
         "g": "671369a42a9b2d5c",
         "group": "117d5289b94a0fc6",
-        "order": 5,
+        "order": 19,
         "width": 0,
         "height": 0,
         "name": "ui - live - error",
@@ -405,8 +470,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 760,
-        "y": 1100,
+        "x": 920,
+        "y": 1040,
         "wires": []
     },
     {
@@ -424,8 +489,8 @@
         "correl": "",
         "expiry": "",
         "broker": "2c5e094fee5ae877",
-        "x": 490,
-        "y": 680,
+        "x": 590,
+        "y": 620,
         "wires": []
     },
     {
@@ -455,8 +520,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 250,
-        "y": 1100,
+        "x": 410,
+        "y": 1040,
         "wires": [
             [
                 "feccda160e4e0b98"
@@ -471,10 +536,11 @@
         "name": "kernel - mqtt send",
         "links": [
             "11a311cff80fcfb0",
-            "f4b715c1321c6848"
+            "f4b715c1321c6848",
+            "406e5cbb1883f19b"
         ],
         "x": 125,
-        "y": 680,
+        "y": 620,
         "wires": [
             [
                 "b42653048b3f39e8"
@@ -489,13 +555,14 @@
         "name": "ui - display error",
         "links": [
             "92c098c716e46e3b",
-            "f4b715c1321c6848"
+            "f4b715c1321c6848",
+            "a943933b63b4106e"
         ],
         "x": 125,
         "y": 1100,
         "wires": [
             [
-                "4d3924b9bbe9f64f"
+                "9a9cf5d3275478fd"
             ]
         ]
     },
@@ -517,8 +584,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 410,
-        "y": 1100,
+        "x": 570,
+        "y": 1040,
         "wires": [
             [
                 "1825f488cf6611b3"
@@ -562,8 +629,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 1160,
+        "x": 730,
+        "y": 1100,
         "wires": [
             [
                 "1825f488cf6611b3"
@@ -575,7 +642,7 @@
         "type": "inject",
         "z": "4bc72a1112cb448c",
         "g": "bcc6f36c217d1643",
-        "name": "boot",
+        "name": "start",
         "props": [
             {
                 "p": "payload"
@@ -590,13 +657,13 @@
         "once": true,
         "onceDelay": "0.5",
         "topic": "",
-        "payload": "boot",
+        "payload": "",
         "payloadType": "str",
         "x": 190,
         "y": 140,
         "wires": [
             [
-                "92c098c716e46e3b"
+                "4aac7381bb46e6de"
             ]
         ]
     },
@@ -615,7 +682,7 @@
             "5bc8025f927ac169",
             "20334854d90a941a"
         ],
-        "x": 315,
+        "x": 655,
         "y": 140,
         "wires": []
     },
@@ -640,7 +707,7 @@
         "to": "",
         "reg": false,
         "x": 260,
-        "y": 980,
+        "y": 920,
         "wires": [
             [
                 "d9dbb31a0ba1e2a5"
@@ -668,7 +735,7 @@
         "to": "",
         "reg": false,
         "x": 660,
-        "y": 980,
+        "y": 920,
         "wires": [
             [
                 "490f552ee626deb7"
@@ -694,7 +761,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 830,
-        "y": 980,
+        "y": 920,
         "wires": [
             [
                 "f2cd63b49ac325ec"
@@ -718,10 +785,10 @@
         "repair": false,
         "outputs": 1,
         "x": 260,
-        "y": 680,
+        "y": 620,
         "wires": [
             [
-                "4f8fb9f9243e9939"
+                "87af7512d96f352e"
             ]
         ]
     },
@@ -799,7 +866,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 460,
-        "y": 980,
+        "y": 920,
         "wires": [
             [
                 "6483959a5e73553e"
@@ -818,7 +885,7 @@
             "911bbe32f79bec46"
         ],
         "x": 125,
-        "y": 980,
+        "y": 920,
         "wires": [
             [
                 "84741ff9d386b4bb"
@@ -837,7 +904,7 @@
             "df19be1275e79b1c"
         ],
         "x": 955,
-        "y": 980,
+        "y": 920,
         "wires": []
     },
     {
@@ -851,7 +918,7 @@
             "f2cd63b49ac325ec"
         ],
         "x": 125,
-        "y": 620,
+        "y": 560,
         "wires": [
             [
                 "f60de1529c423dee"
@@ -871,8 +938,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 620,
+        "x": 390,
+        "y": 560,
         "wires": [
             [
                 "4f8fb9f9243e9939"
@@ -899,7 +966,7 @@
         "templateScope": "site:style",
         "className": "",
         "x": 260,
-        "y": 800,
+        "y": 740,
         "wires": [
             []
         ]
@@ -913,7 +980,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 260,
-        "y": 860,
+        "y": 800,
         "wires": [
             [
                 "911bbe32f79bec46"
@@ -932,7 +999,7 @@
             "5bc8025f927ac169"
         ],
         "x": 395,
-        "y": 860,
+        "y": 800,
         "wires": []
     },
     {
@@ -943,7 +1010,7 @@
         "name": "ui - control",
         "links": [],
         "x": 125,
-        "y": 860,
+        "y": 800,
         "wires": [
             [
                 "bbb6fa5ec8070fb8"
@@ -962,7 +1029,7 @@
             "6fee4d827a53c597"
         ],
         "x": 125,
-        "y": 1280,
+        "y": 1220,
         "wires": [
             [
                 "8470203485da845b"
@@ -1025,7 +1092,7 @@
             }
         ],
         "x": 440,
-        "y": 1280,
+        "y": 1220,
         "wires": [
             [
                 "df0dd76159c71378"
@@ -1053,7 +1120,7 @@
         "to": "",
         "reg": false,
         "x": 250,
-        "y": 1280,
+        "y": 1220,
         "wires": [
             [
                 "ad0e3169b58b79be"
@@ -1069,7 +1136,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "hvac[msg.payload.name]",
+                "p": "units[msg.payload.name]",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -1081,7 +1148,7 @@
         "to": "",
         "reg": false,
         "x": 840,
-        "y": 1280,
+        "y": 1220,
         "wires": [
             [
                 "cc497dc76cd10f76"
@@ -1102,7 +1169,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 1280,
+        "y": 1220,
         "wires": [
             [
                 "696fde60595e3ca5"
@@ -1121,7 +1188,7 @@
             "20334854d90a941a"
         ],
         "x": 1135,
-        "y": 1280,
+        "y": 1220,
         "wires": []
     },
     {
@@ -1136,55 +1203,11 @@
             "6fee4d827a53c597"
         ],
         "x": 125,
-        "y": 1400,
+        "y": 2240,
         "wires": [
             [
                 "08fc7aee2fa5b4fb",
-                "e3514fce5b36b9b3",
-                "65ba94b14b81cb29",
-                "784624db0d5344ce"
-            ]
-        ]
-    },
-    {
-        "id": "784624db0d5344ce",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "hide",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "remove",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 250,
-        "y": 1640,
-        "wires": [
-            [
-                "c16c894c47efca58"
+                "3017e98818806afa"
             ]
         ]
     },
@@ -1198,8 +1221,8 @@
         "label": "Sélectionner un climatiseur",
         "tooltip": "",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "passthru": false,
         "multiple": false,
         "chips": false,
@@ -1217,8 +1240,8 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 480,
-        "y": 1520,
+        "x": 500,
+        "y": 2180,
         "wires": [
             [
                 "2e42392115e074b9"
@@ -1231,662 +1254,18 @@
         "z": "4bc72a1112cb448c",
         "g": "d7251aa1423ff8b1",
         "name": "get names",
-        "func": "flow.set('current_hvac', '', 'default');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet names = global.get('hvac', 'default');\nif (typeof names === 'object') {\n    for(const name in names) {\n        msg.options[i++] = {\n            'label':name,\n            'value':name,\n            'dropdown':'plant'\n        }\n    }\n}\n\nreturn msg;",
+        "func": "flow.set('current_hvac', '', 'default');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for(const name in units) {\n        msg.options[i++] = {\n            'label':name,\n            'value':name,\n            'dropdown':'name'\n        }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 1520,
+        "x": 290,
+        "y": 2180,
         "wires": [
             [
                 "909b9a163208e9bb"
-            ]
-        ]
-    },
-    {
-        "id": "3d2fe34ce382b8de",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "get hvac",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "hvac[msg.payload]",
-                "tot": "global"
-            },
-            {
-                "t": "set",
-                "p": "url",
-                "pt": "msg",
-                "to": "payload.ip",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 840,
-        "y": 1520,
-        "wires": [
-            [
-                "1ce065ee95e4bc96",
-                "e3514fce5b36b9b3",
-                "92fbc48e79113a2c"
-            ]
-        ]
-    },
-    {
-        "id": "1ce065ee95e4bc96",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "sensor url",
-        "rules": [
-            {
-                "t": "set",
-                "p": "url",
-                "pt": "msg",
-                "to": "'http://'&msg.url&'/aircon/get_sensor_info'",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1340,
-        "y": 1520,
-        "wires": [
-            [
-                "da2926c9f2b6bf96"
-            ]
-        ]
-    },
-    {
-        "id": "c578d346dcc9f38e",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "decode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$decodeUrl(msg.payload)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1880,
-        "y": 1520,
-        "wires": [
-            [
-                "828410811667cd18",
-                "6c341edbdc85864c"
-            ]
-        ]
-    },
-    {
-        "id": "30827d65144b688f",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "status",
-        "property": "statusCode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "200",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1710,
-        "y": 1520,
-        "wires": [
-            [
-                "c578d346dcc9f38e"
-            ]
-        ]
-    },
-    {
-        "id": "da2926c9f2b6bf96",
-        "type": "http request",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1530,
-        "y": 1520,
-        "wires": [
-            [
-                "30827d65144b688f"
-            ]
-        ]
-    },
-    {
-        "id": "828410811667cd18",
-        "type": "trigger",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "5m",
-        "op1": "",
-        "op2": "0",
-        "op1type": "nul",
-        "op2type": "str",
-        "duration": "5",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1170,
-        "y": 1460,
-        "wires": [
-            [
-                "1ce065ee95e4bc96"
-            ]
-        ]
-    },
-    {
-        "id": "e3514fce5b36b9b3",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 1460,
-        "wires": [
-            [
-                "828410811667cd18"
-            ]
-        ]
-    },
-    {
-        "id": "6c341edbdc85864c",
-        "type": "split",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "pair",
-        "splt": ",",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 2050,
-        "y": 1520,
-        "wires": [
-            [
-                "05632f2f980cdf7b"
-            ]
-        ]
-    },
-    {
-        "id": "05632f2f980cdf7b",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "split",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pair",
-                "pt": "msg",
-                "to": "$split(msg.payload,'=')",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2210,
-        "y": 1520,
-        "wires": [
-            [
-                "9ef2d8276441403e"
-            ]
-        ]
-    },
-    {
-        "id": "9ef2d8276441403e",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "key",
-        "property": "pair[0]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "mompow",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "htemp",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "hhum",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "otemp",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "cmpfreq",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "err",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 6,
-        "x": 2370,
-        "y": 1520,
-        "wires": [
-            [
-                "e29e8e7d82635b16"
-            ],
-            [
-                "bf68a02f6192ac6f"
-            ],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "178f9c11aa525129",
-        "type": "ui-text-input",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "group": "117d5289b94a0fc6",
-        "name": "ui - hvac - htemp",
-        "label": "Température",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 2890,
-        "y": 1640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bf68a02f6192ac6f",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "exists",
-        "property": "pair[1]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "-",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2530,
-        "y": 1640,
-        "wires": [
-            [
-                "3705a36aca89988f"
-            ],
-            [
-                "e3e3929d71c9c4fe"
-            ]
-        ]
-    },
-    {
-        "id": "3705a36aca89988f",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "value",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "pair[1]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2690,
-        "y": 1640,
-        "wires": [
-            [
-                "178f9c11aa525129"
-            ]
-        ]
-    },
-    {
-        "id": "e3e3929d71c9c4fe",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "hide",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "remove",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2690,
-        "y": 1700,
-        "wires": [
-            [
-                "178f9c11aa525129"
-            ]
-        ]
-    },
-    {
-        "id": "65ba94b14b81cb29",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "hide",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "remove",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2690,
-        "y": 1400,
-        "wires": [
-            [
-                "178f9c11aa525129",
-                "5afc42fcee50017c"
-            ]
-        ]
-    },
-    {
-        "id": "e29e8e7d82635b16",
-        "type": "switch",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "exists",
-        "property": "pair[1]",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "-",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2530,
-        "y": 1520,
-        "wires": [
-            [
-                "f107521ef584778f"
-            ],
-            [
-                "e16a07c1cd6fcc59"
-            ]
-        ]
-    },
-    {
-        "id": "f107521ef584778f",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "value",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "msg.pair[1]='1'?'Marche':'Arrêt'",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2690,
-        "y": 1520,
-        "wires": [
-            [
-                "5afc42fcee50017c"
-            ]
-        ]
-    },
-    {
-        "id": "5afc42fcee50017c",
-        "type": "ui-text-input",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "group": "117d5289b94a0fc6",
-        "name": "ui - hvac - mompow",
-        "label": "Etat",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 2890,
-        "y": 1520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e16a07c1cd6fcc59",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "d7251aa1423ff8b1",
-        "name": "hide",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "remove",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2690,
-        "y": 1580,
-        "wires": [
-            [
-                "5afc42fcee50017c"
             ]
         ]
     },
@@ -1898,7 +1277,7 @@
         "group": "117d5289b94a0fc6",
         "name": "ui - hvac - delete",
         "label": "Supprimer",
-        "order": 4,
+        "order": 18,
         "width": 0,
         "height": 0,
         "emulateClick": false,
@@ -1922,13 +1301,744 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1210,
-        "y": 1640,
+        "x": 1370,
+        "y": 2180,
         "wires": [
             [
                 "8a05731294a1c14f"
             ]
         ]
+    },
+    {
+        "id": "8a05731294a1c14f",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "delete",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "current_sensor",
+                "tot": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "hvac[msg.payload]",
+                "pt": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 2180,
+        "wires": [
+            [
+                "8d95de6420a4cea9"
+            ]
+        ]
+    },
+    {
+        "id": "cea8461aa065a265",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - delete",
+        "mode": "link",
+        "links": [
+            "20334854d90a941a"
+        ],
+        "x": 1845,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "8d95de6420a4cea9",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1720,
+        "y": 2180,
+        "wires": [
+            [
+                "cea8461aa065a265"
+            ]
+        ]
+    },
+    {
+        "id": "2e42392115e074b9",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 2180,
+        "wires": [
+            [
+                "9c82e7c2cd67e016"
+            ],
+            [
+                "3017e98818806afa"
+            ]
+        ]
+    },
+    {
+        "id": "cc497dc76cd10f76",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "ccd67f9d10cf80ef",
+        "name": "50ms",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1220,
+        "wires": [
+            [
+                "6fee4d827a53c597"
+            ]
+        ]
+    },
+    {
+        "id": "786bfd43841bb244",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "control url",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "'http://' & msg.payload & '/aircon/get_control_info'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 260,
+        "wires": [
+            [
+                "f721ca03be8ff260"
+            ]
+        ]
+    },
+    {
+        "id": "f721ca03be8ff260",
+        "type": "http request",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "0f9815dd4369b44e"
+            ]
+        ]
+    },
+    {
+        "id": "0f9815dd4369b44e",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "status",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 260,
+        "wires": [
+            [
+                "f2a95a5b30167059"
+            ]
+        ]
+    },
+    {
+        "id": "2efdb634d6eff450",
+        "type": "comment",
+        "z": "4bc72a1112cb448c",
+        "name": "See : https://github.com/ehjortberg/daikin-control",
+        "info": "",
+        "x": 1020,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f2a95a5b30167059",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "decode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_control",
+                "pt": "flow",
+                "to": "{}",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$decodeUrl(msg.payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 260,
+        "wires": [
+            [
+                "0509e5ebe3af8a97"
+            ]
+        ]
+    },
+    {
+        "id": "1795acd79dcd54ae",
+        "type": "inject",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "2 min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "10",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "30ee26d5a472661f"
+            ]
+        ]
+    },
+    {
+        "id": "30ee26d5a472661f",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "control",
+        "func": "let units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for (const name in units) {\n        return {\n            'topic': name,\n            'payload': units[name]['ip']\n        }\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "6229854c0f2d5b8e"
+            ]
+        ]
+    },
+    {
+        "id": "6229854c0f2d5b8e",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "empty",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "786bfd43841bb244",
+                "44d1c79d6f5da9d6"
+            ]
+        ]
+    },
+    {
+        "id": "0509e5ebe3af8a97",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "parse",
+        "func": "let describe = global.get('describe', 'default');\n\nlet entries = msg.payload.split(',');\nfor (const i in entries) {\n    let pair = entries[i].split('=');\n    let valid = false;\n    let id = pair[0];\n    let label = id;\n    let raw = pair[1];\n    let val = raw;\n    let full = raw;\n    let unit = '';\n\n    // get readbale label\n\tif (typeof describe.label[label] == 'string') {\n        label = describe.label[label];\n\t}\n    // get readbale unit\n\tif (typeof describe.unit[id] == 'string') {\n        unit = describe.unit[id];\n\t}\n\n\t// Convert numeric value to number\n\tif (!isNaN(val) && isFinite(Number(val))) {\n        val = Number(val);\n    }\n\n    if (id === 'pow') {\n        full = describe.pow[raw];\n        valid = true;\n    }\n\n    if (id === 'mode') {\n        full = describe.mode[raw];\n        valid = true;\n    }\n\n    if (id === 'stemp') {\n        full = full + unit;\n        valid = true;\n    }\n\n    if (id === 'f_rate') {\n        full = describe.f_rate[raw];\n        valid = true;\n    }\n\n    if (id === 'f_dir') {\n        full = describe.f_dir[raw];\n        valid = true;\n    }\n\n    // sensor\n    if (id === 'htemp') {\n        full = full + unit;\n        valid = true;\n    }\n\n    // sensor\n    if (id === 'otemp') {\n        full = full + unit;\n        valid = true;\n    }\n\n    if (valid === true) {\n        node.send({\n            'topic': msg.topic,\n            'id': id,\n            'payload': {\n                'unit': unit,\n                'label': label,\n                'raw': raw,\n                'val': val,\n                'full': full\n            }\n        });\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 260,
+        "wires": [
+            [
+                "8aacb5803ea8c1be"
+            ]
+        ]
+    },
+    {
+        "id": "55b7e1ee8f2803b9",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "kernel - control",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "406e5cbb1883f19b",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "kernel - control",
+        "mode": "link",
+        "links": [
+            "8704b93076a73d7e"
+        ],
+        "x": 1995,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4aac7381bb46e6de",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "describe",
+        "func": "global.set('describe', {\n    'label': {\n        'pow': 'Etat',\n        'mode': 'Mode',\n        'stemp': 'Consigne',\n        'f_rate': 'Ventilation',\n        'f_dir': 'Direction',\n        'htemp': 'Interieur',\n        'otemp': 'Exterieur'\n    },\n    'unit': {\n        'pow': '',\n        'mode': '',\n        'stemp': '°C',\n        'htemp': '°C',\n        'otemp': '°C'\n    },\n    'pow': {\n        '1': 'En fonction',\n        '0': \"A l'arrêt\"\n    },\n    'mode': {\n        '0': 'Auto (0)',\n        '1': 'Auto (1)',\n        '2': 'Déshumidificateur',\n        '3': 'Froid',\n        '4': 'Chaud',\n        '6': 'Ventilation',\n        '7': 'Auto (7)'\n    },\n    'f_rate': {\n        'A': 'Auto',\n        'B': 'Silence',\n        '3': 'Vitesse 1',\n        '4': 'Vitesse 2',\n        '5': 'Vitesse 3',\n        '6': 'Vitesse 4',\n        '7': 'Vitesse 5',\n    },\n    'f_dir': {\n        '0': 'Fixe',\n        '1': 'Vertical',\n        '2': 'Horizontal',\n        '3': 'Toutes directions'\n    }\n}, 'default');\n\nglobal.set('icons', {\n    'pow': {\n        '0': 'power-off',\n        '1': 'power-cycle'\n    },\n    'mode': {\n        '0': 'refresh-auto',\n        '1': 'refresh-auto',\n        '2': 'water-percent',\n        '3': 'snwoflake',\n        '4': 'fire',\n        '6': 'weather-windy',\n        '7': 'refresh-auto'\n    },\n    'f_rate': {\n        'A': 'refresh-auto',\n        'B': 'leaf',\n        '3': 'fan-minus',\n        '4': 'fan-speed-1',\n        '5': 'fan-speed-2',\n        '6': 'fan-speed-3',\n        '7': 'fan-plus',\n    },\n    'f_dir': {\n        '0': 'arrow-collapse-all',\n        '1': 'arrow-left-right',\n        '2': 'arrow-up-down',\n        '3': 'arrow-all'\n    }\n}, 'default');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "6ffe0e37a8586c4d"
+            ]
+        ]
+    },
+    {
+        "id": "6ffe0e37a8586c4d",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "bcc6f36c217d1643",
+        "name": "20ms",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "92c098c716e46e3b"
+            ]
+        ]
+    },
+    {
+        "id": "87af7512d96f352e",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "9e3dbf7ae870765f",
+        "name": "mqtt",
+        "rules": [
+            {
+                "t": "set",
+                "p": "prefix",
+                "pt": "msg",
+                "to": "mqtt.topic",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "msg.prefix & '/' & msg.topic",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "prefix",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "4f8fb9f9243e9939"
+            ]
+        ]
+    },
+    {
+        "id": "9c82e7c2cd67e016",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "exists",
+        "property": "controls",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "payload",
+                "vt": "msg"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 850,
+        "y": 2120,
+        "wires": [
+            [
+                "9ed34c6a6b992dd6",
+                "92fbc48e79113a2c"
+            ],
+            [
+                "3017e98818806afa"
+            ]
+        ]
+    },
+    {
+        "id": "8d527a2315ce65b6",
+        "type": "ui-button-group",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui -hvac - f_rate - group",
+        "group": "117d5289b94a0fc6",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "label": "",
+        "className": "",
+        "rounded": false,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "refresh-auto",
+                "value": "A",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "leaf",
+                "value": "B",
+                "valueType": "str",
+                "color": "#999999"
+            },
+            {
+                "label": "",
+                "icon": "fan-minus",
+                "value": "1",
+                "valueType": "str",
+                "color": "#ff6666"
+            },
+            {
+                "label": "",
+                "icon": "fan-speed-1",
+                "value": "2",
+                "valueType": "str",
+                "color": "#009999"
+            },
+            {
+                "label": "",
+                "icon": "fan-speed-2",
+                "value": "3",
+                "valueType": "str",
+                "color": "#cccc00"
+            },
+            {
+                "label": "",
+                "icon": "fan-speed-3",
+                "value": "4",
+                "valueType": "str",
+                "color": "#ff33cc"
+            },
+            {
+                "label": "",
+                "icon": "fan-plus",
+                "value": "5",
+                "valueType": "str",
+                "color": "#cc6600"
+            }
+        ],
+        "topic": "f_rate",
+        "topicType": "str",
+        "x": 1390,
+        "y": 1640,
+        "wires": [
+            [
+                "359152eebac1b453"
+            ]
+        ]
+    },
+    {
+        "id": "9ed34c6a6b992dd6",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "global",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_hvac",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "controls[msg.payload]",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 2060,
+        "wires": [
+            [
+                "913a2c3a8e133591",
+                "f81aaed5b069a001",
+                "ddca86623b0d1a7e",
+                "6ebbaf2a2a07ad30",
+                "6eee33b3df068f44",
+                "23efa6e6da620c13",
+                "c05a7c0221f1a088"
+            ]
+        ]
+    },
+    {
+        "id": "913a2c3a8e133591",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "f_rate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload['f_rate']['raw']",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1580,
+        "wires": [
+            [
+                "8d527a2315ce65b6",
+                "b24b443c26470fd4"
+            ]
+        ]
+    },
+    {
+        "id": "3017e98818806afa",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "hide",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "class",
+                "pt": "msg",
+                "to": "remove",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 2240,
+        "wires": [
+            [
+                "8d527a2315ce65b6",
+                "b24b443c26470fd4",
+                "c16c894c47efca58",
+                "fef910d5cdc8f0f0",
+                "f808d834753be544",
+                "fcac9ec5cb3d7416",
+                "9f0054733e85ea10",
+                "80eafa55285410b7",
+                "8aabae88292ab83c",
+                "f4d36ecf9cb14569",
+                "4c668992b8ffc978",
+                "a943933b63b4106e",
+                "7852aa45407d07d6",
+                "5e7dcb551e612ae7",
+                "3c75056585254baa",
+                "4b9fc26202746ad7",
+                "c23295edd6b4be81"
+            ]
+        ]
+    },
+    {
+        "id": "b24b443c26470fd4",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "name": "ui - hvac - f_rate - title",
+        "label": "Ventilation",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1380,
+        "y": 1580,
+        "wires": []
     },
     {
         "id": "92fbc48e79113a2c",
@@ -1939,7 +2049,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "current_hvac",
+                "p": "current_sensor",
                 "pt": "flow",
                 "to": "payload.name",
                 "tot": "msg"
@@ -1971,8 +2081,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
-        "y": 1580,
+        "x": 1170,
+        "y": 2180,
         "wires": [
             [
                 "c16c894c47efca58"
@@ -1980,23 +2090,127 @@
         ]
     },
     {
-        "id": "8a05731294a1c14f",
+        "id": "fef910d5cdc8f0f0",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "ui - hvac - mode - title",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1380,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "80eafa55285410b7",
+        "type": "ui-button-group",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - mode - group",
+        "group": "117d5289b94a0fc6",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "label": "",
+        "className": "",
+        "rounded": false,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "refresh-auto",
+                "value": "0",
+                "valueType": "str",
+                "color": "#009999"
+            },
+            {
+                "label": "",
+                "icon": "snowflake",
+                "value": "3",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "water-percent",
+                "value": "2",
+                "valueType": "str",
+                "color": "#ff6666"
+            },
+            {
+                "label": "",
+                "icon": "fire",
+                "value": "4",
+                "valueType": "str",
+                "color": "#999999"
+            },
+            {
+                "label": "",
+                "icon": "weather-windy",
+                "value": "6",
+                "valueType": "str",
+                "color": "#cccc00"
+            }
+        ],
+        "topic": "mode",
+        "topicType": "str",
+        "x": 1390,
+        "y": 1520,
+        "wires": [
+            [
+                "359152eebac1b453"
+            ]
+        ]
+    },
+    {
+        "id": "f81aaed5b069a001",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "mode",
+        "func": "msg.payload = msg.payload['mode']['raw'];\n\nif (msg.payload === '1' || msg.payload === '7') {\n    msg.payload = '0';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1460,
+        "wires": [
+            [
+                "fef910d5cdc8f0f0",
+                "80eafa55285410b7"
+            ]
+        ]
+    },
+    {
+        "id": "ddca86623b0d1a7e",
         "type": "change",
         "z": "4bc72a1112cb448c",
         "g": "d7251aa1423ff8b1",
-        "name": "delete",
+        "name": "f_dir",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "current_hvac",
-                "tot": "flow"
-            },
-            {
-                "t": "delete",
-                "p": "hvac[msg.payload]",
-                "pt": "global"
+                "to": "payload['f_dir']['raw']",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -2004,37 +2218,342 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 1640,
+        "x": 1170,
+        "y": 1700,
         "wires": [
             [
-                "8d95de6420a4cea9"
+                "f808d834753be544",
+                "fcac9ec5cb3d7416"
             ]
         ]
     },
     {
-        "id": "cea8461aa065a265",
-        "type": "link out",
+        "id": "f808d834753be544",
+        "type": "ui-text",
         "z": "4bc72a1112cb448c",
         "g": "d7251aa1423ff8b1",
-        "name": "ui - hvac",
-        "mode": "link",
-        "links": [
-            "20334854d90a941a"
-        ],
-        "x": 1695,
-        "y": 1640,
+        "group": "117d5289b94a0fc6",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "name": "ui - hvac- f_dir - title",
+        "label": "Direction",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1370,
+        "y": 1700,
         "wires": []
     },
     {
-        "id": "8d95de6420a4cea9",
+        "id": "fcac9ec5cb3d7416",
+        "type": "ui-button-group",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - f_dir - group",
+        "group": "117d5289b94a0fc6",
+        "order": 9,
+        "width": "6",
+        "height": 1,
+        "label": "",
+        "className": "",
+        "rounded": false,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "arrow-collapse-all",
+                "value": "0",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "arrow-left-right",
+                "value": "1",
+                "valueType": "str",
+                "color": "#999999"
+            },
+            {
+                "label": "",
+                "icon": "arrow-up-down",
+                "value": "2",
+                "valueType": "str",
+                "color": "#ff6666"
+            },
+            {
+                "label": "",
+                "icon": "arrow-all",
+                "value": "3",
+                "valueType": "str",
+                "color": "#009999"
+            }
+        ],
+        "topic": "f_dir",
+        "topicType": "str",
+        "x": 1380,
+        "y": 1760,
+        "wires": [
+            [
+                "359152eebac1b453"
+            ]
+        ]
+    },
+    {
+        "id": "6ebbaf2a2a07ad30",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "stemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload['stemp']['val']",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1820,
+        "wires": [
+            [
+                "9f0054733e85ea10",
+                "c23295edd6b4be81"
+            ]
+        ]
+    },
+    {
+        "id": "9f0054733e85ea10",
+        "type": "ui-number-input",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "name": "ui - hvac- stemp - group",
+        "label": "Consigne",
+        "order": 14,
+        "width": "1",
+        "height": "1",
+        "topic": "stemp",
+        "topicType": "str",
+        "min": "10",
+        "max": "40",
+        "step": "0.5",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "stacked",
+        "x": 1390,
+        "y": 1880,
+        "wires": [
+            [
+                "359152eebac1b453"
+            ]
+        ]
+    },
+    {
+        "id": "8aabae88292ab83c",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 11,
+        "width": "2",
+        "height": "1",
+        "name": "ui - hvac - stemp - title",
+        "label": "Consigne",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1440,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "0187e89ac292da69",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - pilot",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2020,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "359152eebac1b453",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "prepare request",
+        "func": "let current_hvac = flow.get('current_hvac', 'default');\nlet control = global.get('controls[\"' + current_hvac + '\"]', 'default');\nlet unit = global.get('units[\"' + current_hvac + '\"]', 'default');\n\nif (typeof control === 'object' && typeof unit === 'object') {\n    control[msg.topic]['raw'] = msg.payload.toString();\n\n    let res = {\n        'topic': current_hvac,\n        'url': \n            'http://' + unit.ip + '/aircon/set_control_info?' +\n            'pow=' + control['pow']['raw'] + '&' +\n            'mode=' + control['mode']['raw'] + '&' +\n            'stemp=' + control['stemp']['raw'] + '&' +\n            'shum=&' +\n            'f_rate=' + control['f_rate']['raw'] + '&' +\n            'f_dir=' + control['f_dir']['raw']\n    };\n\n    return res;\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 2120,
+        "wires": [
+            [
+                "ad40d5a450c28085"
+            ]
+        ]
+    },
+    {
+        "id": "792337d4e802e397",
+        "type": "link in",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "kernel - control",
+        "links": [
+            "21252b476795410b"
+        ],
+        "x": 225,
+        "y": 320,
+        "wires": [
+            [
+                "30ee26d5a472661f"
+            ]
+        ]
+    },
+    {
+        "id": "5c38a3f37272e23b",
+        "type": "http request",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2010,
+        "y": 2120,
+        "wires": [
+            [
+                "b9aeb493cd3e56a6"
+            ]
+        ]
+    },
+    {
+        "id": "b9aeb493cd3e56a6",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "status",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2190,
+        "y": 2120,
+        "wires": [
+            [
+                "21252b476795410b",
+                "0d2c3399fe80835d",
+                "0e8828dca7fdbb97"
+            ],
+            [
+                "2ce30085eedd2547",
+                "44add1cc83f92f26"
+            ]
+        ]
+    },
+    {
+        "id": "21252b476795410b",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - pilot",
+        "mode": "link",
+        "links": [
+            "792337d4e802e397"
+        ],
+        "x": 2315,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "44add1cc83f92f26",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - error",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2380,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "0c4e4e174653d04a",
         "type": "delay",
         "z": "4bc72a1112cb448c",
         "g": "d7251aa1423ff8b1",
-        "name": "50ms",
+        "name": "1s",
         "pauseType": "delay",
-        "timeout": "50",
-        "timeoutUnits": "milliseconds",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -2044,48 +2563,345 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1570,
-        "y": 1640,
+        "x": 670,
+        "y": 2060,
         "wires": [
             [
-                "cea8461aa065a265"
+                "c0d229ae94f5d18f"
             ]
         ]
     },
     {
-        "id": "2e42392115e074b9",
+        "id": "0d2c3399fe80835d",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "hvac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "topic",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 2060,
+        "wires": [
+            [
+                "0c4e4e174653d04a"
+            ]
+        ]
+    },
+    {
+        "id": "ad40d5a450c28085",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "500ms",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1830,
+        "y": 2120,
+        "wires": [
+            [
+                "5c38a3f37272e23b",
+                "0187e89ac292da69"
+            ]
+        ]
+    },
+    {
+        "id": "2ce30085eedd2547",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "error",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Ordre non traité",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2350,
+        "y": 2180,
+        "wires": [
+            [
+                "a943933b63b4106e"
+            ]
+        ]
+    },
+    {
+        "id": "a943933b63b4106e",
+        "type": "link out",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - error",
+        "mode": "link",
+        "links": [
+            "f4a2353e5f92576c"
+        ],
+        "x": 2475,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "f4d36ecf9cb14569",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "ui - hvac - pow - title",
+        "label": "Etat",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1380,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "6eee33b3df068f44",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "pow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload['pow']['raw']",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1340,
+        "wires": [
+            [
+                "f4d36ecf9cb14569",
+                "4c668992b8ffc978"
+            ]
+        ]
+    },
+    {
+        "id": "4c668992b8ffc978",
+        "type": "ui-button-group",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui -hvac - pow - group",
+        "group": "117d5289b94a0fc6",
+        "order": 3,
+        "width": "6",
+        "height": 1,
+        "label": "",
+        "className": "",
+        "rounded": false,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "",
+                "icon": "power-off",
+                "value": "0",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "",
+                "icon": "power-cycle",
+                "value": "1",
+                "valueType": "str",
+                "color": "#999999"
+            }
+        ],
+        "topic": "pow",
+        "topicType": "str",
+        "x": 1380,
+        "y": 1400,
+        "wires": [
+            [
+                "359152eebac1b453"
+            ]
+        ]
+    },
+    {
+        "id": "c0d229ae94f5d18f",
         "type": "switch",
         "z": "4bc72a1112cb448c",
         "g": "d7251aa1423ff8b1",
+        "name": "current",
+        "property": "current_hvac",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "payload",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 2060,
+        "wires": [
+            [
+                "9ed34c6a6b992dd6"
+            ]
+        ]
+    },
+    {
+        "id": "0e8828dca7fdbb97",
+        "type": "debug",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "ui - hvac - ok",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2370,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "9a9cf5d3275478fd",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
         "name": "empty",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "nempty"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 1,
-        "x": 670,
-        "y": 1520,
+        "outputs": 2,
+        "x": 250,
+        "y": 1100,
         "wires": [
             [
-                "3d2fe34ce382b8de"
+                "4d3924b9bbe9f64f"
+            ],
+            [
+                "adec3f20752be343"
             ]
         ]
     },
     {
-        "id": "cc497dc76cd10f76",
+        "id": "44d1c79d6f5da9d6",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "sensor url",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "'http://' & msg.payload & '/aircon/get_sensor_info'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 320,
+        "wires": [
+            [
+                "f721ca03be8ff260"
+            ]
+        ]
+    },
+    {
+        "id": "c429ed95db2097e5",
+        "type": "trigger",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "500ms",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "250",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1870,
+        "y": 260,
+        "wires": [
+            [
+                "406e5cbb1883f19b",
+                "55b7e1ee8f2803b9"
+            ]
+        ]
+    },
+    {
+        "id": "8aacb5803ea8c1be",
         "type": "delay",
         "z": "4bc72a1112cb448c",
-        "g": "ccd67f9d10cf80ef",
-        "name": "50ms",
-        "pauseType": "delay",
-        "timeout": "50",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
+        "g": "3dbdfa37c673183e",
+        "name": "10/s",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "5",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -2094,12 +2910,244 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1010,
-        "y": 1280,
+        "x": 1550,
+        "y": 260,
         "wires": [
             [
-                "6fee4d827a53c597"
+                "22114efbdf7403c0"
             ]
         ]
+    },
+    {
+        "id": "22114efbdf7403c0",
+        "type": "function",
+        "z": "4bc72a1112cb448c",
+        "g": "3dbdfa37c673183e",
+        "name": "global",
+        "func": "let controls = global.get('controls', 'default');\nif (typeof controls !== 'object') {\n    controls = {};\n}\nlet control = controls[msg.topic];\nif (typeof control !== 'object') {\n    controls[msg.topic] = {};\n}\nlet content = controls[msg.topic][msg.id];\nif (typeof content !== 'object') {\n    controls[msg.topic][msg.id] = {};\n}\n\ncontrols[msg.topic][msg.id] = msg.payload;\n\nglobal.set('controls', controls, 'default');\n\nmsg.payload = controls;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 260,
+        "wires": [
+            [
+                "c429ed95db2097e5"
+            ]
+        ]
+    },
+    {
+        "id": "23efa6e6da620c13",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "htemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload['htemp']['full']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 1940,
+        "wires": [
+            [
+                "5e7dcb551e612ae7",
+                "c23295edd6b4be81"
+            ]
+        ]
+    },
+    {
+        "id": "7852aa45407d07d6",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 12,
+        "width": "2",
+        "height": "1",
+        "name": "ui - hvac - htemp - title",
+        "label": "Interieur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1440,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "5e7dcb551e612ae7",
+        "type": "ui-text-input",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "name": "ui - hvac - htemp - group",
+        "label": "Interieur",
+        "order": 15,
+        "width": "1",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1390,
+        "y": 2000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c05a7c0221f1a088",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "name": "otemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload['otemp']['full']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 2060,
+        "wires": [
+            [
+                "3c75056585254baa",
+                "c23295edd6b4be81"
+            ]
+        ]
+    },
+    {
+        "id": "4b9fc26202746ad7",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 13,
+        "width": "2",
+        "height": "1",
+        "name": "ui - hvac - otemp - title",
+        "label": "Exterieur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1460,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "3c75056585254baa",
+        "type": "ui-text-input",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "name": "ui - hvac - otemp - group",
+        "label": "Exterieur",
+        "order": 16,
+        "width": "1",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 1390,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c23295edd6b4be81",
+        "type": "ui-text",
+        "z": "4bc72a1112cb448c",
+        "g": "d7251aa1423ff8b1",
+        "group": "117d5289b94a0fc6",
+        "order": 10,
+        "width": "6",
+        "height": "1",
+        "name": "ui - hvac - temp - title",
+        "label": "Température",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": " ",
+        "valueType": "str",
+        "x": 1720,
+        "y": 1840,
+        "wires": []
     }
 ]
