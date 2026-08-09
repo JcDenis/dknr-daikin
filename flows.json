@@ -3888,7 +3888,7 @@
         "g": "c0ef7adf5b766dab",
         "group": "3b69d98ff21bd7fe",
         "name": "ui - chart - prev_1day_cool",
-        "label": "Chaud hier",
+        "label": "Froid hier",
         "order": 5,
         "chartType": "bar",
         "category": "topic",
