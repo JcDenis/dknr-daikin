@@ -1,7 +1,9 @@
 # README
 
-[![Release](https://img.shields.io/docker/v/jcpd/dknr-daikin?color=lightblue)](https://hub.docker.com/r/jcpd/dknr-daikin)
-[![License](https://img.shields.io/github/license/jcdenis/dknr-daikin?color=white)](https://github.com/JcDenis/dknr-daikin/blob/master/LICENSE)
+[![Release](https://img.shields.io/docker/v/jcpd/dknr-daikin)](https://img.shields.io/docker/v/jcpd/dknr-daikin)
+[![Pull](https://img.shields.io/docker/pulls/jcpd/dknr-daikin)](https://img.shields.io/docker/pulls/jcpd/dknr-daikin)
+[![Issue](https://img.shields.io/github/issues/jcdenis/dknr-daikin)](https://img.shields.io/github/issues/jcdenis/dknr-daikin)
+[![License](https://img.shields.io/github/license/jcdenis/dknr-daikin)](https://github.com/JcDenis/dknr-daikin/blob/master/LICENSE)
 
 
 ## A propos
@@ -51,6 +53,7 @@ Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant l
 ## A faire
 
 * **Mode découverte** pour rechercher automatiquement les appareils sur le réseau local.
+* **Support Home-Assistant** pour les messages MQTT
 * N'afficher que les options disponibles suivant le modèle.
 
 
