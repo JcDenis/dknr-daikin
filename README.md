@@ -1,14 +1,18 @@
 # README
 
-[![Release](https://img.shields.io/docker/v/jcpd/dknr-daikin?color=lightblue)](https://hub.docker.com/r/jcpd/dknr-daikin)
-[![License](https://img.shields.io/github/license/jcdenis/dknr-daikin?color=white)](https://github.com/JcDenis/dknr-daikin/blob/master/LICENSE)
+[![Release](https://img.shields.io/docker/v/jcpd/dknr-daikin)](https://img.shields.io/docker/v/jcpd/dknr-daikin)
+[![Pull](https://img.shields.io/docker/pulls/jcpd/dknr-daikin)](https://img.shields.io/docker/pulls/jcpd/dknr-daikin)
+[![Issue](https://img.shields.io/github/issues/jcdenis/dknr-daikin)](https://img.shields.io/github/issues/jcdenis/dknr-daikin)
+[![License](https://img.shields.io/github/license/jcdenis/dknr-daikin)](https://github.com/JcDenis/dknr-daikin/blob/master/LICENSE)
 
 
 ## A propos
 
-**dknr-daikin** est un projet consacré à la récupération et à l'exploitation des données des PAC Daikin en local.
+**dknr-daikin** est un projet consacré au pilotage, à la récupération et à l'exploitation des données des PAC Daikin en local. Ce projet n'utilise pas le cloud Daikin mais attaque directement l'API des unités Daikin.
 
-![Dashboard Screenshot](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)
+[![Dashboard Screenshot](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)
+
+[![Dashboard Screenshot 2](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot2.png)](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot2.png)
 
 
 ## Fonctionnalités
@@ -23,15 +27,36 @@
 
 Le matériel exact dépend de l'installation, mais l'utilisation du projet nécessite généralement :
 
-* une ou lusieurs unites interieurs Daikin avec module Wifi/Ethernet.
-* une machine exécutant le logiciel docker.
+* une ou plusieurs unites interieurs Daikin avec module Wifi/Ethernet.
+* une machine exécutant le logiciel docker et connectée au même réseau que les unités.
+
+Ce projet a été testé avec une unité équipée du module Wifi **BRP069Bxx** mais devrait supporter les modules suivants :
+
+* BRP069Axx
+* BRP069Bxx
+* BRP069B4x
+* BRP072Axx
+
+D'autres modules peuvent être supportés, si vous en connaissez ils peuvent être ajouté à cette liste.
 
 
 ## Installation
 
 Des images Docker prêtes à l'emploi sont disponibles. 
-Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant les variables d'environnement suivant :
+Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant les variables d'environnement suivantes :
 
-* DKNR_USERNAME : login de l'interface node-red
-* DKNR_PASSWORD : mot de passe de l'interface node-red
-* DKNR_SECRET   : un mot secret pour encrypter les credits.
+* **DKNR_USERNAME** : login de l'interface node-red.
+* **DKNR_PASSWORD** : mot de passe de l'interface node-red.
+* **DKNR_SECRET**   : un mot secret pour encrypter les credits.
+
+
+## A faire
+
+* **Mode découverte** pour rechercher automatiquement les appareils sur le réseau local.
+* **Support Home-Assistant** pour les messages MQTT
+* N'afficher que les options disponibles suivant le modèle.
+
+
+## Contribuer
+
+Ce projet est **open-source**, vous pouvez participer en créant des [tickets](https://github.com/JcDenis/dknr-daikin/issues) ou en proposant de [requêtes](https://github.com/JcDenis/dknr-daikin/pulls) sur le dépôt github du projet.
