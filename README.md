@@ -8,7 +8,7 @@
 
 **dknr-daikin** est un projet consacré à la récupération et à l'exploitation des données des PAC Daikin en local.
 
-![Dashboard Screenshot](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)
+[![Dashboard Screenshot](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)
 
 
 ## Fonctionnalités
