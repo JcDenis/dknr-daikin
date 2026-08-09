@@ -26,26 +26,26 @@
 Le matériel exact dépend de l'installation, mais l'utilisation du projet nécessite généralement :
 
 * une ou plusieurs unites interieurs Daikin avec module Wifi/Ethernet.
-* une machine exécutant le logiciel docker.
+* une machine exécutant le logiciel docker et connectée au même réseau que les unités.
 
-Ce projet a été testé avec une unité équipé du module Wifi **BRP069Bxx** mais devrait supporter les modules suivants :
+Ce projet a été testé avec une unité équipée du module Wifi **BRP069Bxx** mais devrait supporter les modules suivants :
 
 * BRP069Axx
 * BRP069Bxx
 * BRP069B4x
 * BRP072Axx
 
-D'autres modules peuvent être supporter, si vous en connaissez ils peuvent être ajouté à cette liste.
+D'autres modules peuvent être supportés, si vous en connaissez ils peuvent être ajouté à cette liste.
 
 
 ## Installation
 
 Des images Docker prêtes à l'emploi sont disponibles. 
-Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant les variables d'environnement suivant :
+Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant les variables d'environnement suivantes :
 
-* DKNR_USERNAME : login de l'interface node-red.
-* DKNR_PASSWORD : mot de passe de l'interface node-red.
-* DKNR_SECRET   : un mot secret pour encrypter les credits.
+* **DKNR_USERNAME** : login de l'interface node-red.
+* **DKNR_PASSWORD** : mot de passe de l'interface node-red.
+* **DKNR_SECRET**   : un mot secret pour encrypter les credits.
 
 
 ## A faire
