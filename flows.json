@@ -104,17 +104,14 @@
             "label": true
         },
         "nodes": [
-            "1825f488cf6611b3",
-            "4d3924b9bbe9f64f",
             "f4a2353e5f92576c",
-            "feccda160e4e0b98",
-            "adec3f20752be343",
-            "9a9cf5d3275478fd"
+            "9a9cf5d3275478fd",
+            "df6a020eedb76d02"
         ],
         "x": 84,
         "y": 1179,
-        "w": 942,
-        "h": 142
+        "w": 462,
+        "h": 82
     },
     {
         "id": "614d71e9e019ca82",
@@ -291,7 +288,10 @@
             "123b88fc0719e043",
             "5b3fedb185ead4f1",
             "d88947c9024ed18e",
-            "c59453ab4ef85d26"
+            "c59453ab4ef85d26",
+            "10ec035142a92af2",
+            "1b23773d51b153c3",
+            "32b1f0c235b1e673"
         ],
         "x": 84,
         "y": 2499,
@@ -452,7 +452,7 @@
         "group": "117d5289b94a0fc6",
         "name": "spacer",
         "tooltip": "",
-        "order": 17,
+        "order": 14,
         "width": "6",
         "height": 1,
         "className": ""
@@ -505,31 +505,6 @@
         ]
     },
     {
-        "id": "1825f488cf6611b3",
-        "type": "ui-text",
-        "z": "4bc72a1112cb448c",
-        "g": "671369a42a9b2d5c",
-        "group": "117d5289b94a0fc6",
-        "order": 19,
-        "width": 0,
-        "height": 0,
-        "name": "ui - live - error",
-        "label": "Erreur :",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 920,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "4f8fb9f9243e9939",
         "type": "mqtt out",
         "z": "4bc72a1112cb448c",
@@ -547,41 +522,6 @@
         "x": 590,
         "y": 800,
         "wires": []
-    },
-    {
-        "id": "4d3924b9bbe9f64f",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "671369a42a9b2d5c",
-        "name": "show",
-        "rules": [
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 410,
-        "y": 1220,
-        "wires": [
-            [
-                "feccda160e4e0b98"
-            ]
-        ]
     },
     {
         "id": "8704b93076a73d7e",
@@ -608,84 +548,14 @@
         "name": "ui - display error",
         "links": [
             "92c098c716e46e3b",
-            "a943933b63b4106e"
+            "a943933b63b4106e",
+            "ce45f8f26e4797da"
         ],
         "x": 125,
-        "y": 1280,
-        "wires": [
-            [
-                "9a9cf5d3275478fd"
-            ]
-        ]
-    },
-    {
-        "id": "feccda160e4e0b98",
-        "type": "trigger",
-        "z": "4bc72a1112cb448c",
-        "g": "671369a42a9b2d5c",
-        "name": "5s",
-        "op1": "",
-        "op2": "",
-        "op1type": "pay",
-        "op2type": "str",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 2,
-        "x": 570,
         "y": 1220,
         "wires": [
             [
-                "1825f488cf6611b3"
-            ],
-            [
-                "adec3f20752be343"
-            ]
-        ]
-    },
-    {
-        "id": "adec3f20752be343",
-        "type": "change",
-        "z": "4bc72a1112cb448c",
-        "g": "671369a42a9b2d5c",
-        "name": "hide",
-        "rules": [
-            {
-                "t": "set",
-                "p": "class",
-                "pt": "msg",
-                "to": "remove",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 730,
-        "y": 1280,
-        "wires": [
-            [
-                "1825f488cf6611b3"
+                "9a9cf5d3275478fd"
             ]
         ]
     },
@@ -709,7 +579,7 @@
         "once": true,
         "onceDelay": "0.5",
         "topic": "",
-        "payload": "",
+        "payload": "Démarrage du système en cours",
         "payloadType": "str",
         "x": 190,
         "y": 140,
@@ -1350,7 +1220,7 @@
         "group": "117d5289b94a0fc6",
         "name": "ui - pilot - delete",
         "label": "Supprimer",
-        "order": 18,
+        "order": 15,
         "width": "3",
         "height": "1",
         "emulateClick": false,
@@ -1595,7 +1465,7 @@
         "type": "comment",
         "z": "4bc72a1112cb448c",
         "name": "Sources",
-        "info": "https://github.com/ehjortberg/daikin-control\nhttps://github.com/fredrike/pydaikin",
+        "info": "https://github.com/ehjortberg/daikin-control\nhttps://github.com/fredrike/pydaikin\nhttps://alexis.darsch.nom.fr/daikin2mqtt-piloter-ton-climatiseur-en-mqtt-avec-python/\n",
         "x": 900,
         "y": 140,
         "wires": []
@@ -2414,7 +2284,7 @@
         "group": "117d5289b94a0fc6",
         "name": "ui - pilot - stemp - group",
         "label": "Consigne",
-        "order": 14,
+        "order": 11,
         "width": "1",
         "height": "1",
         "topic": "stemp",
@@ -2548,8 +2418,7 @@
         "name": "ui - pilot",
         "mode": "link",
         "links": [
-            "792337d4e802e397",
-            "e4930da379daf54b"
+            "792337d4e802e397"
         ],
         "x": 2315,
         "y": 2240,
@@ -2845,22 +2714,16 @@
         "rules": [
             {
                 "t": "nempty"
-            },
-            {
-                "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 1,
         "x": 250,
-        "y": 1280,
+        "y": 1220,
         "wires": [
             [
-                "4d3924b9bbe9f64f"
-            ],
-            [
-                "adec3f20752be343"
+                "df6a020eedb76d02"
             ]
         ]
     },
@@ -3010,7 +2873,7 @@
         "group": "117d5289b94a0fc6",
         "name": "ui - pilot - htemp - group",
         "label": "Interieur",
-        "order": 15,
+        "order": 12,
         "width": "1",
         "height": "1",
         "topic": "topic",
@@ -3078,7 +2941,7 @@
         "group": "117d5289b94a0fc6",
         "name": "ui - pilot - otemp - group",
         "label": "Exterieur",
-        "order": 16,
+        "order": 13,
         "width": "1",
         "height": "1",
         "topic": "topic",
@@ -3186,9 +3049,7 @@
         "z": "4bc72a1112cb448c",
         "g": "3dbdfa37c673183e",
         "name": "kernel - control",
-        "links": [
-            "21252b476795410b"
-        ],
+        "links": [],
         "x": 245,
         "y": 440,
         "wires": [
@@ -3584,7 +3445,8 @@
                 "763e400840edda51",
                 "2382820f9c313403",
                 "2e1b4893a4984c47",
-                "f417a301a4a68e2b"
+                "f417a301a4a68e2b",
+                "32b1f0c235b1e673"
             ]
         ]
     },
@@ -4025,6 +3887,111 @@
         "wires": [
             [
                 "57154685c24a3c7c"
+            ]
+        ]
+    },
+    {
+        "id": "df6a020eedb76d02",
+        "type": "ui-notification",
+        "z": "4bc72a1112cb448c",
+        "g": "671369a42a9b2d5c",
+        "ui": "df7710b4b2c4e55b",
+        "position": "top center",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "ui - live - error",
+        "x": 440,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10ec035142a92af2",
+        "type": "switch",
+        "z": "4bc72a1112cb448c",
+        "g": "c0ef7adf5b766dab",
+        "name": "current",
+        "property": "current_chart",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "payload",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 2660,
+        "wires": [
+            [
+                "a85624b31ac1f02c"
+            ]
+        ]
+    },
+    {
+        "id": "1b23773d51b153c3",
+        "type": "delay",
+        "z": "4bc72a1112cb448c",
+        "g": "c0ef7adf5b766dab",
+        "name": "30m",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 2660,
+        "wires": [
+            [
+                "10ec035142a92af2"
+            ]
+        ]
+    },
+    {
+        "id": "32b1f0c235b1e673",
+        "type": "change",
+        "z": "4bc72a1112cb448c",
+        "g": "c0ef7adf5b766dab",
+        "name": "chart",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "current_chart",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 2660,
+        "wires": [
+            [
+                "1b23773d51b153c3"
             ]
         ]
     }
