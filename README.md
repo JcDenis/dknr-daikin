@@ -6,7 +6,7 @@
 
 ## A propos
 
-**dknr-daikin** est un projet consacré au pilotage, à la récupération et à l'exploitation des données des PAC Daikin en local.
+**dknr-daikin** est un projet consacré au pilotage, à la récupération et à l'exploitation des données des PAC Daikin en local. Ce projet n'utilise pas le cloud Daikin mais attaque directement l'API des unités Daikin.
 
 [![Dashboard Screenshot](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)
 
@@ -25,8 +25,17 @@
 
 Le matériel exact dépend de l'installation, mais l'utilisation du projet nécessite généralement :
 
-* une ou lusieurs unites interieurs Daikin avec module Wifi/Ethernet.
+* une ou plusieurs unites interieurs Daikin avec module Wifi/Ethernet.
 * une machine exécutant le logiciel docker.
+
+Ce projet a été testé avec une unité équipé du module Wifi **BRP069Bxx** mais devrait supporter les modules suivants :
+
+* BRP069Axx
+* BRP069Bxx
+* BRP069B4x
+* BRP072Axx
+
+D'autres modules peuvent être supporter, si vous en connaissez ils peuvent être ajouté à cette liste.
 
 
 ## Installation
@@ -34,6 +43,17 @@ Le matériel exact dépend de l'installation, mais l'utilisation du projet néce
 Des images Docker prêtes à l'emploi sont disponibles. 
 Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant les variables d'environnement suivant :
 
-* DKNR_USERNAME : login de l'interface node-red
-* DKNR_PASSWORD : mot de passe de l'interface node-red
+* DKNR_USERNAME : login de l'interface node-red.
+* DKNR_PASSWORD : mot de passe de l'interface node-red.
 * DKNR_SECRET   : un mot secret pour encrypter les credits.
+
+
+## A faire
+
+* **Mode découverte** pour rechercher automatiquement les appareils sur le réseau local.
+* N'afficher que les options disponibles suivant le modèle.
+
+
+## Contribuer
+
+Ce projet est **open-source**, vous pouvez participer en créant des [tickets](https://github.com/JcDenis/dknr-daikin/issues) ou en proposant de [requêtes](https://github.com/JcDenis/dknr-daikin/pulls) sur le dépôt github du projet.
