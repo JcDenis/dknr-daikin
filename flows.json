@@ -215,7 +215,7 @@
         ],
         "x": 84,
         "y": 1479,
-        "w": 2432,
+        "w": 2412,
         "h": 982
     },
     {
@@ -548,8 +548,7 @@
         "name": "ui - display error",
         "links": [
             "92c098c716e46e3b",
-            "a943933b63b4106e",
-            "ce45f8f26e4797da"
+            "a943933b63b4106e"
         ],
         "x": 125,
         "y": 1220,
@@ -1183,7 +1182,7 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 500,
+        "x": 490,
         "y": 2360,
         "wires": [
             [
@@ -1197,16 +1196,19 @@
         "z": "4bc72a1112cb448c",
         "g": "d7251aa1423ff8b1",
         "name": "get names",
-        "func": "flow.set('current_hvac', '', 'default');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for(const name in units) {\n        msg.options[i++] = {\n            'label':name,\n            'value':name,\n            'dropdown':'name'\n        }\n    }\n}\n\nreturn msg;",
-        "outputs": 1,
+        "func": "flow.set('current_hvac', '', 'default');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for(const name in units) {\n        msg.options[i++] = {\n            'label':name,\n            'value':name,\n            'dropdown':'name'\n        }\n    }\n}\n\nif (i == 1) {\n    node.send([null, null]);\n}\nelse if (i == 2) {\n    msg.payload = msg.options[1]['value'];\n    node.send([msg, null]);\n    msg.class = 'remove';\n    msg.enabled = false;\n    node.send([null, msg]);\n}\nelse {\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 2360,
+        "x": 270,
+        "y": 2300,
         "wires": [
+            [
+                "9c82e7c2cd67e016"
+            ],
             [
                 "909b9a163208e9bb"
             ]
@@ -1244,7 +1246,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1360,
+        "x": 1350,
         "y": 2360,
         "wires": [
             [
@@ -1263,12 +1265,12 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "current_sensor",
+                "to": "current_hvac",
                 "tot": "flow"
             },
             {
                 "t": "delete",
-                "p": "hvac[msg.payload]",
+                "p": "units[msg.payload]",
                 "pt": "global"
             }
         ],
@@ -1277,7 +1279,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1560,
+        "x": 1550,
         "y": 2360,
         "wires": [
             [
@@ -1295,7 +1297,7 @@
         "links": [
             "20334854d90a941a"
         ],
-        "x": 1845,
+        "x": 1825,
         "y": 2360,
         "wires": []
     },
@@ -1317,7 +1319,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1720,
+        "x": 1710,
         "y": 2360,
         "wires": [
             [
@@ -1344,7 +1346,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 690,
+        "x": 680,
         "y": 2360,
         "wires": [
             [
@@ -1742,7 +1744,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 850,
+        "x": 840,
         "y": 2300,
         "wires": [
             [
@@ -1822,7 +1824,7 @@
         ],
         "topic": "f_rate",
         "topicType": "str",
-        "x": 1390,
+        "x": 1370,
         "y": 1820,
         "wires": [
             [
@@ -1857,7 +1859,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
+        "x": 1000,
         "y": 2240,
         "wires": [
             [
@@ -1891,7 +1893,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1150,
         "y": 1760,
         "wires": [
             [
@@ -1934,7 +1936,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1160,
         "y": 2420,
         "wires": [
             [
@@ -1976,7 +1978,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1380,
+        "x": 1360,
         "y": 1760,
         "wires": []
     },
@@ -1987,13 +1989,6 @@
         "g": "d7251aa1423ff8b1",
         "name": "show",
         "rules": [
-            {
-                "t": "set",
-                "p": "current_sensor",
-                "pt": "flow",
-                "to": "payload.name",
-                "tot": "msg"
-            },
             {
                 "t": "set",
                 "p": "payload",
@@ -2021,7 +2016,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1160,
         "y": 2360,
         "wires": [
             [
@@ -2050,7 +2045,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1380,
+        "x": 1360,
         "y": 1640,
         "wires": []
     },
@@ -2108,7 +2103,7 @@
         ],
         "topic": "mode",
         "topicType": "str",
-        "x": 1390,
+        "x": 1370,
         "y": 1700,
         "wires": [
             [
@@ -2129,7 +2124,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
+        "x": 1150,
         "y": 1640,
         "wires": [
             [
@@ -2158,7 +2153,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1150,
         "y": 1880,
         "wires": [
             [
@@ -2188,7 +2183,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1370,
+        "x": 1350,
         "y": 1880,
         "wires": []
     },
@@ -2239,7 +2234,7 @@
         ],
         "topic": "f_dir",
         "topicType": "str",
-        "x": 1380,
+        "x": 1360,
         "y": 1940,
         "wires": [
             [
@@ -2267,7 +2262,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1150,
         "y": 2000,
         "wires": [
             [
@@ -2304,7 +2299,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "spinner": "stacked",
-        "x": 1390,
+        "x": 1370,
         "y": 2060,
         "wires": [
             [
@@ -2325,7 +2320,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1640,
+        "x": 1620,
         "y": 2300,
         "wires": [
             [
@@ -2367,7 +2362,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2010,
+        "x": 1990,
         "y": 2300,
         "wires": [
             [
@@ -2396,7 +2391,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2190,
+        "x": 2170,
         "y": 2300,
         "wires": [
             [
@@ -2420,7 +2415,7 @@
         "links": [
             "792337d4e802e397"
         ],
-        "x": 2315,
+        "x": 2295,
         "y": 2240,
         "wires": []
     },
@@ -2438,7 +2433,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2380,
+        "x": 2360,
         "y": 2300,
         "wires": []
     },
@@ -2460,7 +2455,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 670,
+        "x": 660,
         "y": 2240,
         "wires": [
             [
@@ -2488,7 +2483,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
+        "x": 500,
         "y": 2240,
         "wires": [
             [
@@ -2514,7 +2509,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1830,
+        "x": 1810,
         "y": 2300,
         "wires": [
             [
@@ -2542,7 +2537,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2350,
+        "x": 2330,
         "y": 2360,
         "wires": [
             [
@@ -2560,7 +2555,7 @@
         "links": [
             "f4a2353e5f92576c"
         ],
-        "x": 2475,
+        "x": 2455,
         "y": 2420,
         "wires": []
     },
@@ -2585,7 +2580,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1370,
+        "x": 1350,
         "y": 1520,
         "wires": []
     },
@@ -2609,7 +2604,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1150,
         "y": 1520,
         "wires": [
             [
@@ -2651,7 +2646,7 @@
         ],
         "topic": "pow",
         "topicType": "str",
-        "x": 1380,
+        "x": 1360,
         "y": 1580,
         "wires": [
             [
@@ -2677,7 +2672,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 840,
+        "x": 830,
         "y": 2240,
         "wires": [
             [
@@ -2699,7 +2694,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2360,
+        "x": 2340,
         "y": 2180,
         "wires": []
     },
@@ -2856,7 +2851,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1150,
         "y": 2120,
         "wires": [
             [
@@ -2891,7 +2886,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 1390,
+        "x": 1370,
         "y": 2180,
         "wires": [
             []
@@ -2924,7 +2919,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
+        "x": 1150,
         "y": 2240,
         "wires": [
             [
@@ -2959,7 +2954,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 1390,
+        "x": 1370,
         "y": 2300,
         "wires": [
             []
@@ -2986,7 +2981,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1380,
+        "x": 1360,
         "y": 2000,
         "wires": []
     },
@@ -3270,16 +3265,19 @@
         "z": "4bc72a1112cb448c",
         "g": "c0ef7adf5b766dab",
         "name": "get names",
-        "func": "flow.set('current_chart', '', 'default');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for(const name in units) {\n        msg.options[i++] = {\n            'label':name,\n            'value':name,\n            'dropdown':'name'\n        }\n    }\n}\n\nreturn msg;",
-        "outputs": 1,
+        "func": "flow.set('current_chart', '', 'default');\n\nmsg.payload = '';\nmsg.class = '';\nmsg.enabled = true;\nmsg.options = [{\n    'label':'',\n    'value':'',\n    'dropdown':'name'\n}];\n\nlet i = 1;\nlet units = global.get('units', 'default');\nif (typeof units === 'object') {\n    for(const name in units) {\n        msg.options[i++] = {\n            'label':name,\n            'value':name,\n            'dropdown':'name'\n        }\n    }\n}\n\nif (i == 1) {\n    node.send([null, null]);\n}\nelse if (i == 2) {\n    msg.payload = msg.options[1]['value'];\n    node.send([msg, null]);\n    msg.class = 'remove';\n    msg.enlabed = false;\n    node.send([null, msg]);\n}\nelse {\n    node.send([null, msg]);\n}\n\nreturn;",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 2780,
+        "y": 2720,
         "wires": [
+            [
+                "c8eb89f58045e15e"
+            ],
             [
                 "d1a00b5dc10e982b"
             ]
