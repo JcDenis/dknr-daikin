@@ -1,6 +1,6 @@
 # README
 
-[![Release](https://img.shields.io/docker/v/jcpd/dknr-daikin)](https://img.shields.io/docker/v/jcpd/dknr-daikin)
+[![Release](https://img.shields.io/docker/v/jcpd/dknr-daikin?sort=semver)](https://img.shields.io/docker/v/jcpd/dknr-daikin?sort=semver)
 [![Pull](https://img.shields.io/docker/pulls/jcpd/dknr-daikin)](https://img.shields.io/docker/pulls/jcpd/dknr-daikin)
 [![Issue](https://img.shields.io/github/issues/jcdenis/dknr-daikin)](https://img.shields.io/github/issues/jcdenis/dknr-daikin)
 [![License](https://img.shields.io/github/license/jcdenis/dknr-daikin)](https://github.com/JcDenis/dknr-daikin/blob/master/LICENSE)
