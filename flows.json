@@ -1080,7 +1080,9 @@
         "mode": "link",
         "links": [
             "e344ab0a1e1ea77b",
-            "5bc8025f927ac169"
+            "5bc8025f927ac169",
+            "20334854d90a941a",
+            "6248fde82b3cdbff"
         ],
         "x": 1135,
         "y": 860,
@@ -1799,7 +1801,7 @@
         "repeat": "120",
         "crontab": "",
         "once": true,
-        "onceDelay": "10",
+        "onceDelay": "20",
         "topic": "",
         "payload": "",
         "payloadType": "str",
@@ -2089,7 +2091,7 @@
         "repeat": "1800",
         "crontab": "",
         "once": true,
-        "onceDelay": "10",
+        "onceDelay": "30",
         "topic": "",
         "payload": "",
         "payloadType": "str",
@@ -2411,6 +2413,7 @@
         "links": [
             "3b90c3d9bd17f19b",
             "6fee4d827a53c597",
+            "9dad50003e57f1fc",
             "cea8461aa065a265"
         ],
         "x": 125,
@@ -3683,7 +3686,8 @@
         "name": "custom - chart",
         "links": [
             "3b90c3d9bd17f19b",
-            "6fee4d827a53c597"
+            "6fee4d827a53c597",
+            "9dad50003e57f1fc"
         ],
         "x": 125,
         "y": 2120,
