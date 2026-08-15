@@ -330,10 +330,10 @@
             "c0d229ae94f5d18f",
             "0e8828dca7fdbb97",
             "23efa6e6da620c13",
-            "5e7dcb551e612ae7",
-            "c05a7c0221f1a088",
-            "3c75056585254baa",
-            "c23295edd6b4be81"
+            "c23295edd6b4be81",
+            "0c03fc4c1993f564",
+            "9a9b1bbe9cf072c7",
+            "2c4da9da89f9e06e"
         ],
         "x": 84,
         "y": 759,
@@ -384,7 +384,7 @@
         "type": "ui-base",
         "name": "Tableau de bord",
         "path": "/dashboard",
-        "appIcon": "",
+        "appIcon": "/icon.png",
         "includeClientData": true,
         "acceptsClientConfig": [
             "ui-notification",
@@ -455,20 +455,6 @@
         "disabled": "false"
     },
     {
-        "id": "4c116fe2697e0aa9",
-        "type": "ui-group",
-        "name": "Configurer MQTT",
-        "page": "887b3087f3dda2eb",
-        "width": "3",
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "2c5e094fee5ae877",
         "type": "mqtt-broker",
         "name": "MQTT",
@@ -500,20 +486,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "878b175954cece85",
-        "type": "ui-group",
-        "name": "Ajouter un climatiseur",
-        "page": "b3a4a63fc14f6988",
-        "width": "3",
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "117d5289b94a0fc6",
         "type": "ui-group",
         "name": "Piloter un climatiseur",
@@ -537,20 +509,6 @@
         "width": "6",
         "height": 1,
         "className": ""
-    },
-    {
-        "id": "3b69d98ff21bd7fe",
-        "type": "ui-group",
-        "name": "Surveiller un climatiseur",
-        "page": "d462864cc3afd73b",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
     },
     {
         "id": "887b3087f3dda2eb",
@@ -659,6 +617,48 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "4c116fe2697e0aa9",
+        "type": "ui-group",
+        "name": "Configurer MQTT",
+        "page": "887b3087f3dda2eb",
+        "width": "3",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "878b175954cece85",
+        "type": "ui-group",
+        "name": "Ajouter un climatiseur",
+        "page": "b3a4a63fc14f6988",
+        "width": "3",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3b69d98ff21bd7fe",
+        "type": "ui-group",
+        "name": "Surveiller un climatiseur",
+        "page": "d462864cc3afd73b",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "bfacf54839b28751",
@@ -1395,7 +1395,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}",
+        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}\n.nrdb-ui-gauge-tile-floating-label {\n    font-size: 0.75em !important;\n}\n.nrdb-ui-gauge-tile label:after {\n    content: '°C';\n}",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -1885,9 +1885,7 @@
         "g": "3dbdfa37c673183e",
         "name": "custom - port",
         "mode": "link",
-        "links": [
-            "8704b93076a73d7e"
-        ],
+        "links": [],
         "x": 1995,
         "y": 320,
         "wires": []
@@ -2261,8 +2259,6 @@
         "links": [
             "3b90c3d9bd17f19b",
             "6fee4d827a53c597",
-            "911bbe32f79bec46",
-            "92c098c716e46e3b",
             "9dad50003e57f1fc"
         ],
         "x": 125,
@@ -2700,7 +2696,8 @@
                 "6ebbaf2a2a07ad30",
                 "6eee33b3df068f44",
                 "23efa6e6da620c13",
-                "c05a7c0221f1a088"
+                "0d2c3399fe80835d",
+                "9a9b1bbe9cf072c7"
             ]
         ]
     },
@@ -2795,8 +2792,6 @@
                 "f4d36ecf9cb14569",
                 "4c668992b8ffc978",
                 "a943933b63b4106e",
-                "5e7dcb551e612ae7",
-                "3c75056585254baa",
                 "c23295edd6b4be81"
             ]
         ]
@@ -2814,7 +2809,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1180,
+        "x": 1190,
         "y": 920,
         "wires": [
             [
@@ -2844,7 +2839,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1410,
+        "x": 1420,
         "y": 920,
         "wires": []
     },
@@ -2902,7 +2897,7 @@
         ],
         "topic": "mode",
         "topicType": "str",
-        "x": 1420,
+        "x": 1430,
         "y": 980,
         "wires": [
             [
@@ -2930,7 +2925,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1190,
         "y": 1040,
         "wires": [
             [
@@ -3007,7 +3002,7 @@
         ],
         "topic": "f_rate",
         "topicType": "str",
-        "x": 1420,
+        "x": 1430,
         "y": 1100,
         "wires": [
             [
@@ -3036,7 +3031,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1410,
+        "x": 1420,
         "y": 1040,
         "wires": []
     },
@@ -3060,7 +3055,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1190,
         "y": 1160,
         "wires": [
             [
@@ -3090,7 +3085,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1410,
+        "x": 1420,
         "y": 1160,
         "wires": []
     },
@@ -3141,7 +3136,7 @@
         ],
         "topic": "f_dir",
         "topicType": "str",
-        "x": 1410,
+        "x": 1420,
         "y": 1220,
         "wires": [
             [
@@ -3169,7 +3164,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1190,
         "y": 1280,
         "wires": [
             [
@@ -3206,7 +3201,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "spinner": "stacked",
-        "x": 1420,
+        "x": 1430,
         "y": 1340,
         "wires": [
             [
@@ -3286,7 +3281,6 @@
         "wires": [
             [
                 "21252b476795410b",
-                "0d2c3399fe80835d",
                 "0e8828dca7fdbb97"
             ],
             [
@@ -3358,14 +3352,14 @@
         "type": "change",
         "z": "48135a54600713e8",
         "g": "d7251aa1423ff8b1",
-        "name": "hvac",
+        "name": "unit",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "topic",
-                "tot": "msg"
+                "to": "#:(memoryOnly)::current_unit",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -3442,9 +3436,7 @@
         "g": "d7251aa1423ff8b1",
         "name": "custom - detail - error",
         "mode": "link",
-        "links": [
-            "f4a2353e5f92576c"
-        ],
+        "links": [],
         "x": 2515,
         "y": 1700,
         "wires": []
@@ -3470,7 +3462,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1400,
+        "x": 1410,
         "y": 800,
         "wires": []
     },
@@ -3494,7 +3486,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1190,
         "y": 800,
         "wires": [
             [
@@ -3536,7 +3528,7 @@
         ],
         "topic": "pow",
         "topicType": "str",
-        "x": 1410,
+        "x": 1420,
         "y": 860,
         "wires": [
             [
@@ -3599,7 +3591,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload['htemp']['full']",
+                "to": "payload['htemp']['val']",
                 "tot": "msg"
             },
             {
@@ -3615,113 +3607,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1190,
         "y": 1400,
         "wires": [
             [
-                "5e7dcb551e612ae7",
-                "c23295edd6b4be81"
+                "c23295edd6b4be81",
+                "2c4da9da89f9e06e"
             ]
-        ]
-    },
-    {
-        "id": "5e7dcb551e612ae7",
-        "type": "ui-text-input",
-        "z": "48135a54600713e8",
-        "g": "d7251aa1423ff8b1",
-        "group": "117d5289b94a0fc6",
-        "name": "custom - detail - htemp - group",
-        "label": "Interieur",
-        "order": 12,
-        "width": "1",
-        "height": "1",
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 1420,
-        "y": 1460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c05a7c0221f1a088",
-        "type": "change",
-        "z": "48135a54600713e8",
-        "g": "d7251aa1423ff8b1",
-        "name": "otemp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload['otemp']['full']",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
-        "y": 1520,
-        "wires": [
-            [
-                "3c75056585254baa",
-                "c23295edd6b4be81"
-            ]
-        ]
-    },
-    {
-        "id": "3c75056585254baa",
-        "type": "ui-text-input",
-        "z": "48135a54600713e8",
-        "g": "d7251aa1423ff8b1",
-        "group": "117d5289b94a0fc6",
-        "name": "custom - detail - otemp - group",
-        "label": "Exterieur",
-        "order": 13,
-        "width": "1",
-        "height": "1",
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 1420,
-        "y": 1580,
-        "wires": [
-            []
         ]
     },
     {
@@ -3745,7 +3637,7 @@
         "className": "",
         "value": " ",
         "valueType": "str",
-        "x": 1410,
+        "x": 1420,
         "y": 1280,
         "wires": []
     },
@@ -4562,11 +4454,180 @@
         "name": "custom - add - error",
         "mode": "link",
         "links": [
-            "afb87f35140e1869",
-            "f4a2353e5f92576c"
+            "afb87f35140e1869"
         ],
         "x": 755,
         "y": 680,
         "wires": []
+    },
+    {
+        "id": "2c4da9da89f9e06e",
+        "type": "ui-gauge",
+        "z": "48135a54600713e8",
+        "g": "d7251aa1423ff8b1",
+        "name": "custom - detail - htemp - gauge",
+        "group": "117d5289b94a0fc6",
+        "order": 12,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Interieur",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "-5",
+                "color": "#535dea",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "18",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "21",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "23",
+                "color": "#ea8f53",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "30",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "value"
+            }
+        ],
+        "min": "-5",
+        "max": "40",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1430,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c03fc4c1993f564",
+        "type": "ui-gauge",
+        "z": "48135a54600713e8",
+        "g": "d7251aa1423ff8b1",
+        "name": "custom - detail - otemp - gauge",
+        "group": "117d5289b94a0fc6",
+        "order": 13,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "1",
+        "height": "1",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Exterieur",
+        "alwaysShowTitle": true,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "-5",
+                "color": "#535dea",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "18",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "12",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "23",
+                "color": "#ea8f53",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "30",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "value"
+            }
+        ],
+        "min": "-5",
+        "max": "40",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1430,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a9b1bbe9cf072c7",
+        "type": "change",
+        "z": "48135a54600713e8",
+        "g": "d7251aa1423ff8b1",
+        "name": "otemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload['otemp']['val']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 1520,
+        "wires": [
+            [
+                "c23295edd6b4be81",
+                "0c03fc4c1993f564"
+            ]
+        ]
     }
 ]
