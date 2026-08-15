@@ -10,9 +10,13 @@
 
 **dknr-daikin** est un projet consacré au pilotage, à la récupération et à l'exploitation des données des PAC Daikin en local. Ce projet n'utilise pas le cloud Daikin mais attaque directement l'API des unités Daikin.
 
-[![Dashboard Screenshot](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot.png)
+[![Dashboard Screenshot detail](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot.png)](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot.png)
 
-[![Dashboard Screenshot 2](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot2.png)](https://github.com/JcDenis/dknr-daikin/blob/master/dknr-daikin_screenshot2.png)
+[![Dashboard Screenshot chart](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot2.png)](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot2.png)
+
+[![Dashboard Screenshot add](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot3.png)](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot3.png)
+
+[![Dashboard Screenshot mqtt](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot4.png)](https://github.com/JcDenis/dknr-daikin/blob/master/sshot/dknr-daikin_screenshot4.png)
 
 
 ## Fonctionnalités
