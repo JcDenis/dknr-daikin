@@ -336,9 +336,9 @@
             "2c4da9da89f9e06e"
         ],
         "x": 84,
-        "y": 759,
-        "w": 2502,
-        "h": 982
+        "y": 819,
+        "w": 2522,
+        "h": 922
     },
     {
         "id": "c0ef7adf5b766dab",
@@ -1395,7 +1395,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}\n.nrdb-ui-gauge-tile-floating-label {\n    font-size: 0.75em !important;\n}\n.nrdb-ui-gauge-tile label:after {\n    content: '°C';\n}",
+        "format": ".v-card .remove,\n.v-card-text .remove {\n    display: none !important;\n    visibility: hidden;\n    color: transparent !important;\n}\n\n.v-table__wrapper table thead {\n    display: none !important;\n}\ntbody td[data-column-key=lbl] {\n    font-weight: bold !important;\n}\n\n.v-tab-item--selected {\n    color: #0094ce !important;\n}\n\n.v-main {\n    padding-bottom: 2em;\n}\n#app-bar-actions img {\n    margin-right: 20px;\n}\n.ui-title span {\n    font-size: 1.4rem !important;\n    font-weight: normal !important;\n    padding: 0;\n    color: #0094ce;\n}\n\n.nrdb-ui-group {\n    border-radius: 4px;\n    box-shadow: 3px 2px 2px rgba(0, 55, 77, 0.25);\n}\n.oe_nav {\n    background: rgb(var(--v-theme-navigation-background));\n}\n#oe_header {\n    border: none;\n    padding-left: 1em;\n    background: rgb(var(--v-theme-navigation-background));\n}\n.v-application {\n    border-top: 1px solid #CCCCCC;\n    margin-top: -1px;\n}\n.nrdb-ui-gauge-tile-floating-label {\n    margin-top: -5px;\n    font-size: 0.75em !important;\n}\n.nrdb-ui-gauge-tile label:after {\n    content: '°C';\n}",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -2810,7 +2810,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "fef910d5cdc8f0f0",
@@ -2840,7 +2840,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1420,
-        "y": 920,
+        "y": 980,
         "wires": []
     },
     {
@@ -2898,7 +2898,7 @@
         "topic": "mode",
         "topicType": "str",
         "x": 1430,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "359152eebac1b453"
@@ -2926,7 +2926,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "8d527a2315ce65b6",
@@ -3003,7 +3003,7 @@
         "topic": "f_rate",
         "topicType": "str",
         "x": 1430,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
                 "359152eebac1b453"
@@ -3032,7 +3032,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1420,
-        "y": 1040,
+        "y": 1100,
         "wires": []
     },
     {
@@ -3056,7 +3056,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 1160,
+        "y": 1220,
         "wires": [
             [
                 "f808d834753be544",
@@ -3086,7 +3086,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1420,
-        "y": 1160,
+        "y": 1220,
         "wires": []
     },
     {
@@ -3114,14 +3114,14 @@
             },
             {
                 "label": "",
-                "icon": "arrow-left-right",
+                "icon": "arrow-up-down",
                 "value": "1",
                 "valueType": "str",
                 "color": "#999999"
             },
             {
                 "label": "",
-                "icon": "arrow-up-down",
+                "icon": "arrow-left-right",
                 "value": "2",
                 "valueType": "str",
                 "color": "#ff6666"
@@ -3137,7 +3137,7 @@
         "topic": "f_dir",
         "topicType": "str",
         "x": 1420,
-        "y": 1220,
+        "y": 1280,
         "wires": [
             [
                 "359152eebac1b453"
@@ -3165,7 +3165,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 1280,
+        "y": 1340,
         "wires": [
             [
                 "9f0054733e85ea10",
@@ -3202,7 +3202,7 @@
         "iconInnerPosition": "inside",
         "spinner": "stacked",
         "x": 1430,
-        "y": 1340,
+        "y": 1400,
         "wires": [
             [
                 "359152eebac1b453"
@@ -3222,7 +3222,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1680,
+        "x": 1700,
         "y": 1580,
         "wires": [
             [
@@ -3247,7 +3247,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2050,
+        "x": 2070,
         "y": 1580,
         "wires": [
             [
@@ -3276,7 +3276,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2230,
+        "x": 2250,
         "y": 1580,
         "wires": [
             [
@@ -3299,7 +3299,7 @@
         "links": [
             "792337d4e802e397"
         ],
-        "x": 2355,
+        "x": 2375,
         "y": 1520,
         "wires": []
     },
@@ -3317,7 +3317,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2440,
+        "x": 2460,
         "y": 1580,
         "wires": []
     },
@@ -3393,7 +3393,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1870,
+        "x": 1890,
         "y": 1580,
         "wires": [
             [
@@ -3421,7 +3421,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2390,
+        "x": 2410,
         "y": 1640,
         "wires": [
             [
@@ -3437,7 +3437,7 @@
         "name": "custom - detail - error",
         "mode": "link",
         "links": [],
-        "x": 2515,
+        "x": 2535,
         "y": 1700,
         "wires": []
     },
@@ -3463,7 +3463,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1410,
-        "y": 800,
+        "y": 860,
         "wires": []
     },
     {
@@ -3487,7 +3487,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "f4d36ecf9cb14569",
@@ -3529,7 +3529,7 @@
         "topic": "pow",
         "topicType": "str",
         "x": 1420,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "359152eebac1b453"
@@ -3608,7 +3608,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             [
                 "c23295edd6b4be81",
@@ -3638,7 +3638,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1420,
-        "y": 1280,
+        "y": 1340,
         "wires": []
     },
     {
@@ -4522,7 +4522,7 @@
         "styleGlow": false,
         "className": "",
         "x": 1430,
-        "y": 1400,
+        "y": 1460,
         "wires": [
             []
         ]
