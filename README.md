@@ -25,6 +25,7 @@
 - **Décodage des valeurs des unités interieurs** et extraction des valeurs utiles.
 - **Exploitation locale des mesures** pour le suivi de la consommation.
 - **Intégration possible** dans une installation domotique ou un outil de supervision.
+- **Support Home-Assistant Discovery** en lecture et pilotage des unités.
 
 
 ## Matériel requis
@@ -57,7 +58,6 @@ Utilisez le fichier docker-compose.yaml à la racine du dépôt en fournissant l
 ## A faire
 
 * **Mode découverte** pour rechercher automatiquement les appareils sur le réseau local.
-* **Support Home-Assistant** pour les messages MQTT
 * N'afficher que les options disponibles suivant le modèle.
 
 
