@@ -77,7 +77,7 @@
             "a61e338a90e40454"
         ],
         "x": 104,
-        "y": 939,
+        "y": 999,
         "w": 872,
         "h": 82
     },
@@ -97,12 +97,15 @@
             "a7e91861334c2f3c",
             "b5364a44ccea95f0",
             "9cf2faedd5b2daed",
-            "6225f03ff6dc9b53"
+            "6225f03ff6dc9b53",
+            "afbd97b879d85c83",
+            "33b4d45ea3fa2606",
+            "53504324112729d3"
         ],
         "x": 104,
         "y": 399,
-        "w": 502,
-        "h": 142
+        "w": 522,
+        "h": 202
     },
     {
         "id": "3125e13b64d36f79",
@@ -120,7 +123,7 @@
             "a0d4a58f6f2020c9"
         ],
         "x": 104,
-        "y": 579,
+        "y": 639,
         "w": 462,
         "h": 82
     },
@@ -147,7 +150,7 @@
             "87cc4d2f8fcba5d5"
         ],
         "x": 104,
-        "y": 699,
+        "y": 759,
         "w": 1092,
         "h": 202
     },
@@ -244,12 +247,16 @@
             "5968a246dafd3fd1",
             "ed89e7d1ff1174c6",
             "e9bff9a6011e1823",
-            "63cea292f3ab064a"
+            "63cea292f3ab064a",
+            "461124c623e4a5a5",
+            "5005c3c777ff1604",
+            "ebc9e85a21d1784e",
+            "9c7c19035b497bc8"
         ],
         "x": 104,
         "y": 279,
         "w": 2272,
-        "h": 142
+        "h": 242
     },
     {
         "id": "ccd67f9d10cf80ef",
@@ -271,7 +278,7 @@
             "5d415007badd7b01"
         ],
         "x": 104,
-        "y": 819,
+        "y": 939,
         "w": 872,
         "h": 142
     },
@@ -326,7 +333,7 @@
             "fb00188e76c467ad"
         ],
         "x": 104,
-        "y": 999,
+        "y": 1119,
         "w": 2072,
         "h": 922
     },
@@ -372,7 +379,7 @@
             "2304cdc94811f7ae"
         ],
         "x": 104,
-        "y": 1959,
+        "y": 2079,
         "w": 1962,
         "h": 382
     },
@@ -395,7 +402,7 @@
             "ace85f776ce24777"
         ],
         "x": 104,
-        "y": 639,
+        "y": 759,
         "w": 702,
         "h": 142
     },
@@ -417,10 +424,11 @@
             "0fa4bf14a6d75ece",
             "2fb10323742b7181",
             "2655f7f2c56c1663",
-            "9e38aff7d93b334a"
+            "9e38aff7d93b334a",
+            "c5f8e4d0d1f069d4"
         ],
         "x": 104,
-        "y": 459,
+        "y": 579,
         "w": 852,
         "h": 142
     },
@@ -743,7 +751,7 @@
         "type": "mqtt out",
         "z": "4c2feff02c9aebaa",
         "g": "30a9ab79a8733dca",
-        "name": "mqtt",
+        "name": "mqtt out",
         "topic": "",
         "qos": "0",
         "retain": "false",
@@ -753,8 +761,8 @@
         "correl": "",
         "expiry": "",
         "broker": "2c5e094fee5ae877",
-        "x": 450,
-        "y": 440,
+        "x": 460,
+        "y": 500,
         "wires": []
     },
     {
@@ -762,13 +770,13 @@
         "type": "link in",
         "z": "4c2feff02c9aebaa",
         "g": "30a9ab79a8733dca",
-        "name": "common - mqtt - send",
+        "name": "common - mqtt",
         "links": [
             "406e5cbb1883f19b",
             "6326830faa9d7246"
         ],
         "x": 145,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "a7e91861334c2f3c"
@@ -788,7 +796,7 @@
             "2fb10323742b7181"
         ],
         "x": 145,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "a0d4a58f6f2020c9"
@@ -838,7 +846,8 @@
             "afb87f35140e1869",
             "5bc8025f927ac169",
             "20334854d90a941a",
-            "6248fde82b3cdbff"
+            "6248fde82b3cdbff",
+            "984119cb4b5fbdba"
         ],
         "x": 1255,
         "y": 80,
@@ -865,7 +874,7 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "d14248a8129a6f85"
@@ -891,7 +900,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 810,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "2b841cb3792eb18d"
@@ -915,7 +924,7 @@
         "repair": false,
         "outputs": 1,
         "x": 280,
-        "y": 500,
+        "y": 560,
         "wires": [
             [
                 "013352a6caf85a7b",
@@ -1005,7 +1014,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 460,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "916e2c752fced7af"
@@ -1024,7 +1033,7 @@
             "9dad50003e57f1fc"
         ],
         "x": 145,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "a61e338a90e40454"
@@ -1041,10 +1050,11 @@
         "links": [
             "b5364a44ccea95f0",
             "e344ab0a1e1ea77b",
-            "b66aceda104390c6"
+            "b66aceda104390c6",
+            "984119cb4b5fbdba"
         ],
         "x": 935,
-        "y": 980,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1061,7 +1071,8 @@
         "y": 440,
         "wires": [
             [
-                "9cf2faedd5b2daed"
+                "9cf2faedd5b2daed",
+                "afbd97b879d85c83"
             ]
         ]
     },
@@ -1079,7 +1090,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "013352a6caf85a7b"
@@ -1095,7 +1106,7 @@
         "ui": "df7710b4b2c4e55b",
         "events": "all",
         "x": 320,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "87cc4d2f8fcba5d5"
@@ -1116,7 +1127,7 @@
             "6248fde82b3cdbff"
         ],
         "x": 1155,
-        "y": 860,
+        "y": 920,
         "wires": []
     },
     {
@@ -1127,7 +1138,7 @@
         "name": "common - ui - control",
         "links": [],
         "x": 145,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "621fd5aa868e217b"
@@ -1154,7 +1165,7 @@
         "className": "",
         "name": "common - error",
         "x": 460,
-        "y": 620,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1176,7 +1187,7 @@
         "repair": false,
         "outputs": 1,
         "x": 270,
-        "y": 620,
+        "y": 680,
         "wires": [
             [
                 "618e7cca86342c8c"
@@ -1383,7 +1394,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "bd190842f932d680"
@@ -1404,7 +1415,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "ccc7d2bdbdbc0a27",
@@ -1435,7 +1446,7 @@
         "templateScope": "site:style",
         "className": "",
         "x": 310,
-        "y": 740,
+        "y": 800,
         "wires": [
             []
         ]
@@ -1459,7 +1470,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1030,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "9dad50003e57f1fc"
@@ -1517,7 +1528,7 @@
             "2a70146f1d7e0e9b"
         ],
         "x": 995,
-        "y": 800,
+        "y": 860,
         "wires": []
     },
     {
@@ -1530,7 +1541,7 @@
             "d6d899c54d8c0e9f"
         ],
         "x": 145,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "68cfbd10d14638b1",
@@ -1559,7 +1570,7 @@
         "to": "",
         "reg": false,
         "x": 540,
-        "y": 860,
+        "y": 920,
         "wires": [
             [
                 "68cfbd10d14638b1"
@@ -1571,7 +1582,7 @@
         "type": "debug",
         "z": "4c2feff02c9aebaa",
         "g": "30a9ab79a8733dca",
-        "name": "common - mqtt",
+        "name": "common - mqtt out",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -1580,8 +1591,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 500,
+        "x": 490,
+        "y": 560,
         "wires": []
     },
     {
@@ -1598,12 +1609,69 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "340d3a2fa16281ac"
             ]
         ]
+    },
+    {
+        "id": "33b4d45ea3fa2606",
+        "type": "mqtt in",
+        "z": "4c2feff02c9aebaa",
+        "g": "30a9ab79a8733dca",
+        "name": "mqtt in",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2c5e094fee5ae877",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "53504324112729d3"
+            ]
+        ]
+    },
+    {
+        "id": "afbd97b879d85c83",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "30a9ab79a8733dca",
+        "name": "check",
+        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/set/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "33b4d45ea3fa2606"
+            ]
+        ]
+    },
+    {
+        "id": "53504324112729d3",
+        "type": "link out",
+        "z": "4c2feff02c9aebaa",
+        "g": "30a9ab79a8733dca",
+        "name": "common - mqtt",
+        "mode": "link",
+        "links": [
+            "461124c623e4a5a5"
+        ],
+        "x": 575,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "a0adaa6d8090b715",
@@ -1638,7 +1706,7 @@
         "z": "48135a54600713e8",
         "g": "8f8487859d9ae01f",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-daikin';\n\nmsg.payload.hmi = {\n    'detail': 'Piloter',\n    'chart': 'Surveiller',\n    'add': 'Ajouter',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.label = {\n    'pow': 'Etat',\n    'mode': 'Mode',\n    'stemp': 'Consigne',\n    'f_rate': 'Ventilation',\n    'f_dir': 'Direction',\n    'htemp': 'Interieur',\n    'otemp': 'Exterieur',\n    'curr_day_heat': \"Chaud aujourd'hui\",\n    'prev_1day_heat': 'Chaud hier',\n    'curr_day_cool': \"Froid aujourd'hui\",\n    'prev_1day_cool': 'Froid hier',\n    'id': 'Identifiant',\n    'ssid': 'SSID'\n};\n\nmsg.payload.unit =  {\n    'pow': '',\n    'mode': '',\n    'stemp': '°C',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': '°C',\n    'otemp': '°C',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.type = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'sensor',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'sensor',\n    'otemp': 'sensor',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_state_class = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'measurement',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'measurement',\n    'otemp': 'measurement',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_device_class = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'temperature',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'temperature',\n    'otemp': 'temperature',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_value_template = {\n    'pow': \"{% if 'pow' in value_json %}{{ value_json.pow.raw }}{% endif %}\",\n    'mode': \"{% if 'mode' in value_json %}{{ value_json.mode.raw }}{% endif %}\",\n    'stemp': \"{% if 'stemp' in value_json %}{{ value_json.stemp.raw }}{% endif %}\",\n    'f_rate': \"{% if 'f_rate' in value_json %}{{ value_json.f_rate.raw }}{% endif %}\",\n    'f_dir': \"{% if 'f_dir' in value_json %}{{ value_json.f_dir.raw }}{% endif %}\",\n    'htemp': \"{% if 'htemp' in value_json %}{{ value_json.htemp.raw }}{% endif %}\",\n    'otemp': \"{% if 'otemp' in value_json %}{{ value_json.otemp.raw }}{% endif %}\",\n    'id': \"{% if 'id' in value_json %}{{ value_json.id.raw }}{% endif %}\",\n    'ssid': \"{% if 'ssid' in value_json %}{{ value_json.ssid.raw }}{% endif %}\"\n};\n\nmsg.payload.pow =  {\n    '1': 'En fonction',\n    '0': \"A l'arrêt\"\n};\n\nmsg.payload.mode = {\n    '0': 'Auto (0)',\n    '1': 'Auto (1)',\n    '2': 'Déshumidificateur',\n    '3': 'Froid',\n    '4': 'Chaud',\n    '6': 'Ventilation',\n    '7': 'Auto (7)'\n};\n\nmsg.payload.f_rate = {\n    'A': 'Auto',\n    'B': 'Silence',\n    '3': 'Vitesse 1',\n    '4': 'Vitesse 2',\n    '5': 'Vitesse 3',\n    '6': 'Vitesse 4',\n    '7': 'Vitesse 5',\n};\n\nmsg.payload.f_dir = {\n    '0': 'Fixe',\n    '1': 'Vertical',\n    '2': 'Horizontal',\n    '3': 'Toutes directions'\n};\n\nglobal.set('icons', {\n    'pow': {\n        '0': 'power-off',\n        '1': 'power-cycle'\n    },\n    'mode': {\n        '0': 'refresh-auto',\n        '1': 'refresh-auto',\n        '2': 'water-percent',\n        '3': 'snwoflake',\n        '4': 'fire',\n        '6': 'weather-windy',\n        '7': 'refresh-auto'\n    },\n    'f_rate': {\n        'A': 'refresh-auto',\n        'B': 'leaf',\n        '3': 'fan-minus',\n        '4': 'fan-speed-1',\n        '5': 'fan-speed-2',\n        '6': 'fan-speed-3',\n        '7': 'fan-plus',\n    },\n    'f_dir': {\n        '0': 'arrow-collapse-all',\n        '1': 'arrow-left-right',\n        '2': 'arrow-up-down',\n        '3': 'arrow-all'\n    }\n}, 'memoryOnly');\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-daikin';\n\nmsg.payload.hmi = {\n    'detail': 'Piloter',\n    'chart': 'Surveiller',\n    'add': 'Ajouter',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.label = {\n    'pow': 'Etat',\n    'mode': 'Mode',\n    'stemp': 'Consigne',\n    'f_rate': 'Ventilation',\n    'f_dir': 'Direction',\n    'htemp': 'Interieur',\n    'otemp': 'Exterieur',\n    'curr_day_heat': \"Chaud aujourd'hui\",\n    'prev_1day_heat': 'Chaud hier',\n    'curr_day_cool': \"Froid aujourd'hui\",\n    'prev_1day_cool': 'Froid hier',\n    'id': 'Identifiant',\n    'ssid': 'SSID'\n};\n\nmsg.payload.unit =  {\n    'pow': '',\n    'mode': '',\n    'stemp': '°C',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': '°C',\n    'otemp': '°C',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.type = {\n    'pow': 'switch',\n    'mode': 'select',\n    'stemp': 'sensor',\n    'f_rate': 'select',\n    'f_dir': 'select',\n    'htemp': 'sensor',\n    'otemp': 'sensor',\n    'id': 'text',\n    'ssid': 'text'\n};\n\nmsg.payload.discovery_state_class = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'measurement',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'measurement',\n    'otemp': 'measurement',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_device_class = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'temperature',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'temperature',\n    'otemp': 'temperature',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_value_template = {\n    'pow': \"{% if 'mode' in value_json %}{{ value_json.pow.raw }}{% endif %}\",\n    'mode': \"{% if 'mode' in value_json %}{{ value_json.mode.raw }}{% endif %}\",\n    'stemp': \"{% if 'stemp' in value_json %}{{ value_json.stemp.raw }}{% endif %}\",\n    'f_rate': \"{% if 'f_rate' in value_json %}{{ value_json.f_rate.raw }}{% endif %}\",\n    'f_dir': \"{% if 'f_dir' in value_json %}{{ value_json.f_dir.raw }}{% endif %}\",\n    'htemp': \"{% if 'htemp' in value_json %}{{ value_json.htemp.raw }}{% endif %}\",\n    'otemp': \"{% if 'otemp' in value_json %}{{ value_json.otemp.raw }}{% endif %}\",\n    'id': \"{% if 'id' in value_json %}{{ value_json.id.raw }}{% endif %}\",\n    'ssid': \"{% if 'ssid' in value_json %}{{ value_json.ssid.raw }}{% endif %}\"\n};\n\nmsg.payload.pow =  {\n    '1': 'En fonction',\n    '0': \"A l'arrêt\"\n};\n\nmsg.payload.mode = {\n    '0': 'Auto (0)',\n    '1': 'Auto (1)',\n    '2': 'Déshumidificateur',\n    '3': 'Froid',\n    '4': 'Chaud',\n    '6': 'Ventilation',\n    '7': 'Auto (7)'\n};\n\nmsg.payload.f_rate = {\n    'A': 'Auto',\n    'B': 'Silence',\n    '3': 'Vitesse 1',\n    '4': 'Vitesse 2',\n    '5': 'Vitesse 3',\n    '6': 'Vitesse 4',\n    '7': 'Vitesse 5',\n};\n\nmsg.payload.f_dir = {\n    '0': 'Fixe',\n    '1': 'Vertical',\n    '2': 'Horizontal',\n    '3': 'Toutes directions'\n};\n\nglobal.set('icons', {\n    'pow': {\n        '0': 'power-off',\n        '1': 'power-cycle'\n    },\n    'mode': {\n        '0': 'refresh-auto',\n        '1': 'refresh-auto',\n        '2': 'water-percent',\n        '3': 'snwoflake',\n        '4': 'fire',\n        '6': 'weather-windy',\n        '7': 'refresh-auto'\n    },\n    'f_rate': {\n        'A': 'refresh-auto',\n        'B': 'leaf',\n        '3': 'fan-minus',\n        '4': 'fan-speed-1',\n        '5': 'fan-speed-2',\n        '6': 'fan-speed-3',\n        '7': 'fan-plus',\n    },\n    'f_dir': {\n        '0': 'arrow-collapse-all',\n        '1': 'arrow-left-right',\n        '2': 'arrow-up-down',\n        '3': 'arrow-all'\n    }\n}, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1896,7 +1964,7 @@
             "6bfb1868b6a98f04"
         ],
         "x": 2335,
-        "y": 320,
+        "y": 480,
         "wires": []
     },
     {
@@ -1907,7 +1975,8 @@
         "name": "custom - port",
         "links": [
             "21252b476795410b",
-            "6fee4d827a53c597"
+            "6fee4d827a53c597",
+            "0fa4bf14a6d75ece"
         ],
         "x": 145,
         "y": 320,
@@ -1922,7 +1991,7 @@
         "type": "trigger",
         "z": "48135a54600713e8",
         "g": "3dbdfa37c673183e",
-        "name": "500ms",
+        "name": "250ms",
         "op1": "",
         "op2": "",
         "op1type": "nul",
@@ -2005,7 +2074,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2230,
-        "y": 380,
+        "y": 320,
         "wires": []
     },
     {
@@ -2020,7 +2089,7 @@
             "9dad50003e57f1fc"
         ],
         "x": 145,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "e15a1f4c9b2ebe8f"
@@ -2111,7 +2180,7 @@
             }
         ],
         "x": 460,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "efbab03f220791d4"
@@ -2133,7 +2202,7 @@
             "792337d4e802e397"
         ],
         "x": 935,
-        "y": 860,
+        "y": 980,
         "wires": []
     },
     {
@@ -2155,7 +2224,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 810,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "6fee4d827a53c597"
@@ -2175,7 +2244,7 @@
             "cea8461aa065a265"
         ],
         "x": 145,
-        "y": 1880,
+        "y": 2000,
         "wires": [
             [
                 "08fc7aee2fa5b4fb",
@@ -2213,7 +2282,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 520,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "2e42392115e074b9"
@@ -2234,7 +2303,7 @@
         "finalize": "",
         "libs": [],
         "x": 290,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "9c82e7c2cd67e016"
@@ -2277,7 +2346,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 1420,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "8a05731294a1c14f"
@@ -2315,7 +2384,7 @@
         "to": "",
         "reg": false,
         "x": 1630,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "8d95de6420a4cea9"
@@ -2333,7 +2402,7 @@
             "20334854d90a941a"
         ],
         "x": 1905,
-        "y": 1820,
+        "y": 1940,
         "wires": []
     },
     {
@@ -2355,7 +2424,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1790,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "cea8461aa065a265"
@@ -2382,7 +2451,7 @@
         "repair": false,
         "outputs": 2,
         "x": 730,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "9c82e7c2cd67e016"
@@ -2414,7 +2483,7 @@
         "repair": false,
         "outputs": 2,
         "x": 890,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "9ed34c6a6b992dd6",
@@ -2453,7 +2522,7 @@
         "to": "",
         "reg": false,
         "x": 1050,
-        "y": 1700,
+        "y": 1820,
         "wires": [
             [
                 "913a2c3a8e133591",
@@ -2502,7 +2571,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "c16c894c47efca58"
@@ -2544,7 +2613,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1880,
+        "y": 2000,
         "wires": [
             [
                 "8d527a2315ce65b6",
@@ -2577,7 +2646,7 @@
         "finalize": "",
         "libs": [],
         "x": 1210,
-        "y": 1160,
+        "y": 1280,
         "wires": [
             [
                 "fef910d5cdc8f0f0",
@@ -2607,7 +2676,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1440,
-        "y": 1160,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2665,7 +2734,7 @@
         "topic": "mode",
         "topicType": "str",
         "x": 1450,
-        "y": 1220,
+        "y": 1340,
         "wires": [
             [
                 "fb00188e76c467ad"
@@ -2693,7 +2762,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1280,
+        "y": 1400,
         "wires": [
             [
                 "8d527a2315ce65b6",
@@ -2770,7 +2839,7 @@
         "topic": "f_rate",
         "topicType": "str",
         "x": 1450,
-        "y": 1340,
+        "y": 1460,
         "wires": [
             [
                 "fb00188e76c467ad"
@@ -2799,7 +2868,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1440,
-        "y": 1280,
+        "y": 1400,
         "wires": []
     },
     {
@@ -2823,7 +2892,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1400,
+        "y": 1520,
         "wires": [
             [
                 "f808d834753be544",
@@ -2853,7 +2922,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1440,
-        "y": 1400,
+        "y": 1520,
         "wires": []
     },
     {
@@ -2904,7 +2973,7 @@
         "topic": "f_dir",
         "topicType": "str",
         "x": 1440,
-        "y": 1460,
+        "y": 1580,
         "wires": [
             [
                 "fb00188e76c467ad"
@@ -2932,7 +3001,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1520,
+        "y": 1640,
         "wires": [
             [
                 "9f0054733e85ea10",
@@ -2969,7 +3038,7 @@
         "iconInnerPosition": "inside",
         "spinner": "stacked",
         "x": 1450,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "fb00188e76c467ad"
@@ -2997,7 +3066,7 @@
         "to": "",
         "reg": false,
         "x": 550,
-        "y": 1700,
+        "y": 1820,
         "wires": [
             [
                 "12be107437affcbe"
@@ -3026,7 +3095,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1430,
-        "y": 1040,
+        "y": 1160,
         "wires": []
     },
     {
@@ -3050,7 +3119,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [
                 "f4d36ecf9cb14569",
@@ -3092,7 +3161,7 @@
         "topic": "pow",
         "topicType": "str",
         "x": 1440,
-        "y": 1100,
+        "y": 1220,
         "wires": [
             [
                 "fb00188e76c467ad"
@@ -3118,7 +3187,7 @@
         "repair": false,
         "outputs": 1,
         "x": 880,
-        "y": 1700,
+        "y": 1820,
         "wires": [
             [
                 "9ed34c6a6b992dd6"
@@ -3153,7 +3222,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1640,
+        "y": 1760,
         "wires": [
             [
                 "c23295edd6b4be81",
@@ -3183,7 +3252,7 @@
         "value": " ",
         "valueType": "str",
         "x": 1440,
-        "y": 1520,
+        "y": 1640,
         "wires": []
     },
     {
@@ -3208,7 +3277,7 @@
         "repair": false,
         "outputs": 2,
         "x": 870,
-        "y": 2180,
+        "y": 2300,
         "wires": [
             [
                 "a85624b31ac1f02c"
@@ -3230,7 +3299,7 @@
             "9dad50003e57f1fc"
         ],
         "x": 145,
-        "y": 2300,
+        "y": 2420,
         "wires": [
             [
                 "44abed769ee1380c",
@@ -3252,7 +3321,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 2180,
+        "y": 2300,
         "wires": [
             [
                 "c8eb89f58045e15e"
@@ -3292,7 +3361,7 @@
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
         "x": 520,
-        "y": 2240,
+        "y": 2360,
         "wires": [
             [
                 "3e5de0886a5f8c2c"
@@ -3319,7 +3388,7 @@
         "repair": false,
         "outputs": 2,
         "x": 710,
-        "y": 2240,
+        "y": 2360,
         "wires": [
             [
                 "c8eb89f58045e15e"
@@ -3364,7 +3433,7 @@
         "to": "",
         "reg": false,
         "x": 1670,
-        "y": 2300,
+        "y": 2420,
         "wires": [
             [
                 "84388804b70e1254",
@@ -3423,7 +3492,7 @@
         "to": "",
         "reg": false,
         "x": 1030,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "763e400840edda51",
@@ -3453,7 +3522,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1220,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             [
                 "f0cfdcaede41be95"
@@ -3518,7 +3587,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1910,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             []
         ]
@@ -3542,7 +3611,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1220,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "de359db72e3bf974"
@@ -3607,7 +3676,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1910,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -3631,7 +3700,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1220,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "0fba116c15010acd"
@@ -3696,7 +3765,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1910,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             []
         ]
@@ -3720,7 +3789,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1220,
-        "y": 2180,
+        "y": 2300,
         "wires": [
             [
                 "12a03aa6dd7165cd"
@@ -3785,7 +3854,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1910,
-        "y": 2180,
+        "y": 2300,
         "wires": [
             []
         ]
@@ -3809,7 +3878,7 @@
         "repair": false,
         "outputs": 1,
         "x": 860,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "a85624b31ac1f02c"
@@ -3837,7 +3906,7 @@
         "to": "",
         "reg": false,
         "x": 530,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "976739752c4c9fd5"
@@ -3858,7 +3927,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "ad0e3169b58b79be"
@@ -3879,7 +3948,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 860,
+        "y": 980,
         "wires": [
             [
                 "cc497dc76cd10f76"
@@ -3900,7 +3969,7 @@
             "afb87f35140e1869"
         ],
         "x": 775,
-        "y": 920,
+        "y": 1040,
         "wires": []
     },
     {
@@ -3965,7 +4034,7 @@
         "styleGlow": false,
         "className": "",
         "x": 1450,
-        "y": 1640,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -4032,7 +4101,7 @@
         "styleGlow": false,
         "className": "",
         "x": 1450,
-        "y": 1700,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -4065,7 +4134,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 1700,
+        "y": 1820,
         "wires": [
             [
                 "c23295edd6b4be81",
@@ -4092,7 +4161,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 690,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "10ec035142a92af2"
@@ -4118,7 +4187,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 710,
-        "y": 1700,
+        "y": 1820,
         "wires": [
             [
                 "c0d229ae94f5d18f"
@@ -4133,7 +4202,7 @@
         "name": "custom - chart - data",
         "links": [],
         "x": 705,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             [
                 "1ae0889c3294734f"
@@ -4149,7 +4218,7 @@
         "mode": "return",
         "links": [],
         "x": 1055,
-        "y": 2000,
+        "y": 2120,
         "wires": []
     },
     {
@@ -4166,7 +4235,7 @@
         "finalize": "",
         "libs": [],
         "x": 880,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             [
                 "a2f287946aea18f9"
@@ -4194,7 +4263,7 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             [
                 "8200f72f31e4caf6"
@@ -4213,7 +4282,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1620,
-        "y": 2000,
+        "y": 2120,
         "wires": [
             [
                 "84388804b70e1254"
@@ -4241,7 +4310,7 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "a267350c61f95127"
@@ -4269,7 +4338,7 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "5cd45b3fd180da8a"
@@ -4297,7 +4366,7 @@
         "to": "",
         "reg": false,
         "x": 1410,
-        "y": 2180,
+        "y": 2300,
         "wires": [
             [
                 "2304cdc94811f7ae"
@@ -4316,7 +4385,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1620,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "2e4d451cf446e8b3"
@@ -4335,7 +4404,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1620,
-        "y": 2120,
+        "y": 2240,
         "wires": [
             [
                 "57154685c24a3c7c"
@@ -4354,7 +4423,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1620,
-        "y": 2180,
+        "y": 2300,
         "wires": [
             [
                 "06559300429f64a8"
@@ -4375,7 +4444,7 @@
         "finalize": "",
         "libs": [],
         "x": 2210,
-        "y": 320,
+        "y": 480,
         "wires": [
             [
                 "406e5cbb1883f19b"
@@ -4392,7 +4461,7 @@
             "2b841cb3792eb18d"
         ],
         "x": 145,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "0ee0b69136e9646f"
@@ -4414,7 +4483,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 670,
-        "y": 740,
+        "y": 860,
         "wires": []
     },
     {
@@ -4423,7 +4492,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "let enabled = global.get('mqtt.enabled', 'default') || false;\nlet discovery = global.get('mqtt.discovery', 'default') || '';\nlet topic = global.get('mqtt.topic', 'default') || '';\n\nif (enabled && discovery.length > 0) {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    let controls = global.get('controls', 'memoryOnly') || {};\n    for (const host in controls) {\n        let id = controls[host]['id']['raw'];\n        for (const k in describe.discovery_value_template) {\n            // !!! limit to sensor for now\n            if (describe.type[k] === 'sensor') {\n                msg.topic = discovery + '/' + describe.type[k] + '/daikin/' + id + '_' + k + '/config';\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'state_topic': topic + '/' + id,\n                    'value_template': describe.discovery_value_template[k],\n                    'state_class': describe.discovery_state_class[k],\n                    'device_class': describe.discovery_device_class[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "func": "let enabled = global.get('mqtt.enabled', 'default') || false;\nlet discovery = global.get('mqtt.discovery', 'default') || '';\nlet topic = global.get('mqtt.topic', 'default') || '';\n\nif (enabled && discovery.length > 0) {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    let controls = global.get('controls', 'memoryOnly') || {};\n    for (const host in controls) {\n        let id = controls[host]['id']['raw'];\n        for (const k in describe.discovery_value_template) {\n            let exists = false;\n            msg.topic = discovery + '/' + describe.type[k] + '/daikin/' + id + '_' + k + '/config';\n\n            if (describe.type[k] === 'sensor') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'state_topic': topic + '/' + id,\n                    'value_template': describe.discovery_value_template[k],\n                    'state_class': describe.discovery_state_class[k],\n                    'device_class': describe.discovery_device_class[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'switch') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'payload_off': '{\"'+ k + '\": \"0\"}',\n                    'payload_on': '{\"' + k + '\": \"1\"}',\n                    'state_off': '0',\n                    'state_on': '1',\n                    'value_template': describe.discovery_value_template[k],\n                    'command_topic': topic + '/set/' + id,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'select') {\n            }\n\n            if (exists === true) {\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4431,7 +4500,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "e10ce118e77873bd",
@@ -4462,7 +4531,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 250,
-        "y": 740,
+        "y": 860,
         "wires": [
             [
                 "0ee0b69136e9646f"
@@ -4480,7 +4549,7 @@
             "6bfb1868b6a98f04"
         ],
         "x": 745,
-        "y": 680,
+        "y": 800,
         "wires": []
     },
     {
@@ -4502,7 +4571,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 630,
-        "y": 680,
+        "y": 800,
         "wires": [
             [
                 "6326830faa9d7246"
@@ -4631,10 +4700,11 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 560,
+        "y": 680,
         "wires": [
             [
-                "811720b37bdc98bc"
+                "811720b37bdc98bc",
+                "c5f8e4d0d1f069d4"
             ],
             [
                 "2655f7f2c56c1663"
@@ -4659,7 +4729,7 @@
         "senderr": false,
         "headers": [],
         "x": 450,
-        "y": 500,
+        "y": 620,
         "wires": [
             [
                 "d56a7e0dad5c3b18"
@@ -4688,7 +4758,7 @@
         "repair": false,
         "outputs": 2,
         "x": 630,
-        "y": 500,
+        "y": 620,
         "wires": [
             [
                 "9e38aff7d93b334a"
@@ -4705,10 +4775,11 @@
         "g": "a1502e28a180d262",
         "name": "custom - pilot",
         "links": [
-            "820f5577fffcf5b3"
+            "820f5577fffcf5b3",
+            "207a2a5ba4258287"
         ],
         "x": 145,
-        "y": 560,
+        "y": 680,
         "wires": [
             [
                 "769f34ab430aa5ac"
@@ -4722,9 +4793,11 @@
         "g": "a1502e28a180d262",
         "name": "custom - pilot",
         "mode": "link",
-        "links": [],
+        "links": [
+            "792337d4e802e397"
+        ],
         "x": 915,
-        "y": 500,
+        "y": 620,
         "wires": []
     },
     {
@@ -4738,7 +4811,7 @@
             "afb87f35140e1869"
         ],
         "x": 915,
-        "y": 560,
+        "y": 680,
         "wires": []
     },
     {
@@ -4762,7 +4835,7 @@
         "to": "",
         "reg": false,
         "x": 790,
-        "y": 560,
+        "y": 680,
         "wires": [
             [
                 "2fb10323742b7181"
@@ -4783,7 +4856,7 @@
         "finalize": "",
         "libs": [],
         "x": 1850,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "0c66be2f0d38c3bd"
@@ -4809,7 +4882,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 2010,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "820f5577fffcf5b3"
@@ -4827,7 +4900,7 @@
             "97165b7c7e73b366"
         ],
         "x": 2135,
-        "y": 1760,
+        "y": 1880,
         "wires": []
     },
     {
@@ -4849,7 +4922,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 790,
-        "y": 500,
+        "y": 620,
         "wires": [
             [
                 "0fa4bf14a6d75ece"
@@ -4875,7 +4948,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1690,
-        "y": 1760,
+        "y": 1880,
         "wires": [
             [
                 "18ded0ade4465b7e"
@@ -4907,5 +4980,106 @@
                 "f721ca03be8ff260"
             ]
         ]
+    },
+    {
+        "id": "c5f8e4d0d1f069d4",
+        "type": "debug",
+        "z": "48135a54600713e8",
+        "g": "a1502e28a180d262",
+        "name": "custom - pilot",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "461124c623e4a5a5",
+        "type": "link in",
+        "z": "48135a54600713e8",
+        "g": "3dbdfa37c673183e",
+        "name": "custom- port - in",
+        "links": [
+            "53504324112729d3"
+        ],
+        "x": 155,
+        "y": 480,
+        "wires": [
+            [
+                "5005c3c777ff1604",
+                "9c7c19035b497bc8"
+            ]
+        ]
+    },
+    {
+        "id": "5005c3c777ff1604",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "3dbdfa37c673183e",
+        "name": "control in",
+        "func": "let controls = global.get('controls', 'memoryOnly') || {};\nlet describe = global.get('describe', 'memoryOnly') || {};\nlet pilot = ['pow','mode','stemp','f_rate','f_dir'];\nlet key = Object.keys(msg.payload)[0];\nlet value = msg.payload[key];\n\nif(pilot.indexOf(key) != -1) {\n    for (const host in controls) {\n        if (msg.topic.includes(controls[host]['id']['raw'])) {\n            let id = key;\n            let label = id;\n            let raw = value;\n            let full = raw;\n            let unit = '';\n            \n            // get readbale label\n            if (typeof describe.label[label] == 'string') {\n                label = describe.label[label];\n            }\n            // get readbale unit\n            if (typeof describe.unit[id] == 'string') {\n                unit = describe.unit[id];\n            }\n\n            // Convert numeric value to number\n            if (!isNaN(value) && isFinite(Number(value))) {\n                value = Number(value);\n            }\n\n            if (id === 'pow') {\n                full = describe.pow[raw];\n            }\n            else if (id === 'mode') {\n                full = describe.mode[raw];\n            }\n            else if (id === 'stemp') {\n                full = full + unit;\n            }\n            else if (id === 'f_rate') {\n                full = describe.f_rate[raw];\n            }\n            else if (id === 'f_dir') {\n                full = describe.f_dir[raw];\n            }\n\n            controls[host][key] = {\n                'unit': unit,\n                'label': label,\n                'raw': raw,\n                'value': value,\n                'full': full\n            };\n\n            global.set('controls', controls, 'memoryOnly');\n\n            msg.topic = host;\n\n            return msg;\n        }\n    }\n}\n\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 480,
+        "wires": [
+            [
+                "ebc9e85a21d1784e",
+                "9c7c19035b497bc8"
+            ]
+        ]
+    },
+    {
+        "id": "ebc9e85a21d1784e",
+        "type": "trigger",
+        "z": "48135a54600713e8",
+        "g": "3dbdfa37c673183e",
+        "name": "250ms",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "250",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1710,
+        "y": 480,
+        "wires": [
+            [
+                "1a260ab0a5831cf3"
+            ]
+        ]
+    },
+    {
+        "id": "9c7c19035b497bc8",
+        "type": "debug",
+        "z": "48135a54600713e8",
+        "g": "3dbdfa37c673183e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 420,
+        "wires": []
     }
 ]
