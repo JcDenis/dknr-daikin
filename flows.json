@@ -252,12 +252,13 @@
             "5005c3c777ff1604",
             "ebc9e85a21d1784e",
             "20e7e9133e9da97d",
-            "fe38595583c4c63b"
+            "fe38595583c4c63b",
+            "bdb588b1ff76c9a3"
         ],
         "x": 104,
         "y": 279,
         "w": 2272,
-        "h": 242
+        "h": 202
     },
     {
         "id": "ccd67f9d10cf80ef",
@@ -4489,7 +4490,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "let enabled = global.get('mqtt.enabled', 'default') || false;\nlet discovery = global.get('mqtt.discovery', 'default') || '';\nlet topic = global.get('mqtt.topic', 'default') || '';\n\nif (enabled && discovery.length > 0) {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    let controls = global.get('controls', 'memoryOnly') || {};\n    for (const host in controls) {\n        let id = controls[host]['id']['raw'];\n        for (const k in describe.discovery_value_template) {\n            let exists = false;\n            msg.topic = discovery + '/' + describe.type[k] + '/daikin/' + id + '_' + k + '/config';\n\n            if (describe.type[k] === 'sensor') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'state_topic': topic + '/' + id,\n                    'value_template': describe.discovery_value_template[k],\n                    'state_class': describe.discovery_state_class[k],\n                    'device_class': describe.discovery_device_class[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'switch') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'payload_off': '0',\n                    'payload_on': '1',\n                    'state_off': '0',\n                    'state_on': '1',\n                    'value_template': describe.discovery_value_template[k],\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'select') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'value_template': describe.discovery_value_template[k],\n                    \"options\": Object.values(describe[k]), // by label\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'number') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'value_template': describe.discovery_value_template[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'min': '10',\n                    'max': '31',\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n\n            if (exists === true) {\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "func": "let enabled = global.get('mqtt.enabled', 'default') || false;\nlet discovery = global.get('mqtt.discovery', 'default') || '';\nlet topic = global.get('mqtt.topic', 'default') || '';\n\nif (enabled && discovery.length > 0) {\n    \n    msg.qos = 0;\n    msg.retain = true\n    \n    let describe = global.get('describe', 'memoryOnly') || {};\n    let controls = global.get('controls', 'memoryOnly') || {};\n    for (const host in controls) {\n        let id = controls[host]['id']['raw'];\n        for (const k in describe.discovery_value_template) {\n            let exists = false;\n            msg.topic = discovery + '/' + describe.type[k] + '/daikin/' + id + '_' + k + '/config';\n\n            if (describe.type[k] === 'sensor') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'state_topic': topic + '/' + id,\n                    'value_template': describe.discovery_value_template[k],\n                    'state_class': describe.discovery_state_class[k],\n                    'device_class': describe.discovery_device_class[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'switch') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'payload_off': '0',\n                    'payload_on': '1',\n                    'state_off': '0',\n                    'state_on': '1',\n                    'value_template': describe.discovery_value_template[k],\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'select') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'value_template': describe.discovery_value_template[k],\n                    \"options\": Object.values(describe[k]), // by label\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'number') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'value_template': describe.discovery_value_template[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'min': '10',\n                    'max': '31',\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n\n            if (exists === true) {\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5006,10 +5007,11 @@
             "53504324112729d3"
         ],
         "x": 145,
-        "y": 480,
+        "y": 440,
         "wires": [
             [
-                "5005c3c777ff1604"
+                "5005c3c777ff1604",
+                "bdb588b1ff76c9a3"
             ]
         ]
     },
@@ -5019,7 +5021,7 @@
         "z": "48135a54600713e8",
         "g": "3dbdfa37c673183e",
         "name": "control in",
-        "func": "let controls = global.get('controls', 'memoryOnly') || {};\nlet describe = global.get('describe', 'memoryOnly') || {};\nlet pilot = ['pow','mode','stemp','f_rate','f_dir'];\nlet path = msg.topic.split('/');\nlet key = path.pop();\nlet device = path.pop();\nlet value = msg.payload.toString();\n\nif(pilot.indexOf(key) != -1) {\n    for (const host in controls) {\n        if (device === controls[host]['id']['raw']) {\n            let label = key;\n\n            // pilot by full name (mode, f_rate, f_dir) ?\n            if (typeof describe[key] === 'object') {\n                for (const src in describe[key]) {\n                    if (describe[key][src] === value) {\n                        value = src;\n                    }\n                }\n            }\n\n            let raw = value;\n            let full = value;\n            let unit = '';\n            \n            // get readbale label\n            if (typeof describe.label[label] == 'string') {\n                label = describe.label[label];\n            }\n            // get readbale unit\n            if (typeof describe.unit[key] == 'string') {\n                unit = describe.unit[key];\n            }\n\n            // Convert numeric value to number\n            if (!isNaN(value) && isFinite(Number(value))) {\n                value = Number(value);\n            }\n\n            if (key === 'pow') {\n                full = describe.pow[raw];\n            }\n            else if (key === 'mode') {\n                full = describe.mode[raw];\n            }\n            else if (key === 'stemp') {\n                full = full + unit;\n            }\n            else if (key === 'f_rate') {\n                full = describe.f_rate[raw];\n            }\n            else if (key === 'f_dir') {\n                full = describe.f_dir[raw];\n            }\n\n            controls[host][key] = {\n                'unit': unit,\n                'label': label,\n                'raw': raw,\n                'value': value,\n                'full': full\n            };\n\n            global.set('controls', controls, 'memoryOnly');\n\n            msg.topic = host;\n            msg.payload = controls;\n\n            return msg;\n        }\n    }\n}\n\nreturn;",
+        "func": "// topic: mqtt.topic /set/ control.id / control.x = value\nlet controls = global.get('controls', 'memoryOnly') || {};\nlet describe = global.get('describe', 'memoryOnly') || {};\nlet pilot = ['pow', 'mode', 'stemp', 'f_rate', 'f_dir'];\nlet path = msg.topic.split('/');\nif (path.length !== 4 ||\n    path[1] !== 'set' ||\n    !pilot.includes(path[3])\n) {\n\n    return;\n}\nlet key = path.pop();\nlet device = path.pop();\nlet value = msg.payload.toString();\n\nnode.status({text: device + ' - ' + key + ' - ' + value});\n\nif(pilot.indexOf(key) != -1) {\n    for (const host in controls) {\n        if (device === controls[host]['id']['raw']) {\n            let label = key;\n\n            // pilot by full name (mode, f_rate, f_dir) ?\n            if (typeof describe[key] === 'object') {\n                for (const src in describe[key]) {\n                    if (describe[key][src] === value) {\n                        value = src;\n                    }\n                }\n            }\n\n            let raw = value;\n            let full = value;\n            let unit = '';\n            \n            // get readbale label\n            if (typeof describe.label[label] == 'string') {\n                label = describe.label[label];\n            }\n            // get readbale unit\n            if (typeof describe.unit[key] == 'string') {\n                unit = describe.unit[key];\n            }\n\n            // Convert numeric value to number\n            if (!isNaN(value) && isFinite(Number(value))) {\n                value = Number(value);\n            }\n\n            if (key === 'pow') {\n                full = describe.pow[raw];\n            }\n            else if (key === 'mode') {\n                full = describe.mode[raw];\n            }\n            else if (key === 'stemp') {\n                full = full + unit;\n            }\n            else if (key === 'f_rate') {\n                full = describe.f_rate[raw];\n            }\n            else if (key === 'f_dir') {\n                full = describe.f_dir[raw];\n            }\n\n            controls[host][key] = {\n                'unit': unit,\n                'label': label,\n                'raw': raw,\n                'value': value,\n                'full': full\n            };\n\n            global.set('controls', controls, 'memoryOnly');\n\n            msg.topic = host;\n            msg.payload = controls;\n\n            return msg;\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5027,10 +5029,11 @@
         "finalize": "",
         "libs": [],
         "x": 280,
-        "y": 480,
+        "y": 440,
         "wires": [
             [
-                "ebc9e85a21d1784e"
+                "ebc9e85a21d1784e",
+                "bdb588b1ff76c9a3"
             ]
         ]
     },
@@ -5053,7 +5056,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 2050,
-        "y": 480,
+        "y": 440,
         "wires": [
             [
                 "1a260ab0a5831cf3",
@@ -5072,7 +5075,7 @@
             "97165b7c7e73b366"
         ],
         "x": 2335,
-        "y": 480,
+        "y": 440,
         "wires": []
     },
     {
@@ -5089,11 +5092,29 @@
         "finalize": "",
         "libs": [],
         "x": 2210,
-        "y": 480,
+        "y": 440,
         "wires": [
             [
                 "20e7e9133e9da97d"
             ]
         ]
+    },
+    {
+        "id": "bdb588b1ff76c9a3",
+        "type": "debug",
+        "z": "48135a54600713e8",
+        "g": "3dbdfa37c673183e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 380,
+        "wires": []
     }
 ]
