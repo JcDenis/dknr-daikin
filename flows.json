@@ -69,12 +69,12 @@
             "label": true
         },
         "nodes": [
-            "916e2c752fced7af",
             "d14248a8129a6f85",
             "340d3a2fa16281ac",
             "e344ab0a1e1ea77b",
             "2b841cb3792eb18d",
-            "a61e338a90e40454"
+            "a61e338a90e40454",
+            "3087495d87961a42"
         ],
         "x": 104,
         "y": 999,
@@ -433,6 +433,25 @@
         "y": 579,
         "w": 852,
         "h": 142
+    },
+    {
+        "id": "e28c6dafcd3de09d",
+        "type": "group",
+        "z": "48135a54600713e8",
+        "name": "reset",
+        "style": {
+            "fill": "#ff0000",
+            "fill-opacity": "0.05",
+            "label": true
+        },
+        "nodes": [
+            "025916ad75d760ec",
+            "ba456fafe595af98"
+        ],
+        "x": 574,
+        "y": 159,
+        "w": 332,
+        "h": 82
     },
     {
         "id": "df7710b4b2c4e55b",
@@ -855,34 +874,6 @@
         "wires": []
     },
     {
-        "id": "916e2c752fced7af",
-        "type": "change",
-        "z": "4c2feff02c9aebaa",
-        "g": "25bcbc0ccf878f92",
-        "name": "write",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mqtt",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 1040,
-        "wires": [
-            [
-                "d14248a8129a6f85"
-            ]
-        ]
-    },
-    {
         "id": "d14248a8129a6f85",
         "type": "delay",
         "z": "4c2feff02c9aebaa",
@@ -982,7 +973,14 @@
             },
             {
                 "label": "Home Assistant Discovery topic",
-                "key": "discovery",
+                "key": "homeassistant",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Old topic",
+                "key": "old_topic",
                 "type": "text",
                 "required": false,
                 "rows": null
@@ -1001,7 +999,8 @@
             "topic": "",
             "username": "",
             "password": "",
-            "discovery": "",
+            "homeassistant": "",
+            "old_topic": "",
             "enabled": false
         },
         "payload": "",
@@ -1018,7 +1017,7 @@
         "y": 1040,
         "wires": [
             [
-                "916e2c752fced7af"
+                "3087495d87961a42"
             ]
         ]
     },
@@ -1238,7 +1237,7 @@
         "z": "4c2feff02c9aebaa",
         "g": "06491d8d5f7b9f7c",
         "name": "app",
-        "func": "delete msg.filename;\n\nif (typeof msg.payload === 'object') {\n    let describe = global.get('describe', 'memoryOnly') || {};\n    describe.app = {\n        'title': msg.payload.description.slice(5), // remove \"DKNR \"\n        'version' : msg.payload.version,\n        'git': msg.payload.name\n    };\n    global.set('describe', describe, 'memoryOnly');\n}\nreturn msg;",
+        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', {}, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description.slice(5) || '', // remove \"DKNR \"\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || ''\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'enabled': false,\n    'homeassistant': 'homeassistant',\n    'old_topic': 'daikin'\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1601,7 +1600,7 @@
         "z": "4c2feff02c9aebaa",
         "g": "25bcbc0ccf878f92",
         "name": "read",
-        "func": "msg.payload = global.get('mqtt', 'default') || {}\n\nif (typeof msg.payload.discovery !== 'string' || msg.payload.discorevy == '') {\n    msg.payload.discovery = 'homeassistant';\n}\n\nreturn msg;",
+        "func": "msg.payload = { ...(global.get('describe.mqtt', 'memoryOnly') || {}), ...(global.get('mqtt', 'default') || {}) };\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1644,7 +1643,7 @@
         "z": "4c2feff02c9aebaa",
         "g": "30a9ab79a8733dca",
         "name": "check",
-        "func": "msg.broker = {};\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.topic + '/set/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
+        "func": "msg.broker = {};\n\n// Old topic is used !!!\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.old_topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.old_topic + '/set/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1672,6 +1671,27 @@
         "x": 575,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "3087495d87961a42",
+        "type": "function",
+        "z": "4c2feff02c9aebaa",
+        "g": "25bcbc0ccf878f92",
+        "name": "data",
+        "func": "global.set('mqtt', msg.payload, 'default');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1040,
+        "wires": [
+            [
+                "d14248a8129a6f85"
+            ]
+        ]
     },
     {
         "id": "a0adaa6d8090b715",
@@ -1706,7 +1726,7 @@
         "z": "48135a54600713e8",
         "g": "8f8487859d9ae01f",
         "name": "custom - describe",
-        "func": "msg.payload.project = 'dknr-daikin';\n\nmsg.payload.hmi = {\n    'detail': 'Piloter',\n    'chart': 'Surveiller',\n    'add': 'Ajouter',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.label = {\n    'pow': 'Etat',\n    'mode': 'Mode',\n    'stemp': 'Consigne',\n    'f_rate': 'Ventilation',\n    'f_dir': 'Direction',\n    'htemp': 'Interieur',\n    'otemp': 'Exterieur',\n    'curr_day_heat': \"Chaud aujourd'hui\",\n    'prev_1day_heat': 'Chaud hier',\n    'curr_day_cool': \"Froid aujourd'hui\",\n    'prev_1day_cool': 'Froid hier',\n    'id': 'Identifiant',\n    'ssid': 'SSID'\n};\n\nmsg.payload.unit =  {\n    'pow': '',\n    'mode': '',\n    'stemp': '°C',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': '°C',\n    'otemp': '°C',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.type = {\n    'pow': 'switch',\n    'mode': 'select',\n    'stemp': 'number',\n    'f_rate': 'select',\n    'f_dir': 'select',\n    'htemp': 'sensor',\n    'otemp': 'sensor',\n    'id': 'text',\n    'ssid': 'text'\n};\n\nmsg.payload.discovery_state_class = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'measurement',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'measurement',\n    'otemp': 'measurement',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_device_class = {\n    'pow': '',\n    'mode': '',\n    'stemp': 'temperature',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': 'temperature',\n    'otemp': 'temperature',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.discovery_value_template = {\n    'pow': \"{% if 'mode' in value_json %}{{ value_json.pow.raw }}{% endif %}\",\n    'mode': \"{% if 'mode' in value_json %}{{ value_json.mode.full }}{% endif %}\",\n    'stemp': \"{% if 'stemp' in value_json %}{{ value_json.stemp.raw }}{% endif %}\",\n    'f_rate': \"{% if 'f_rate' in value_json %}{{ value_json.f_rate.full }}{% endif %}\",\n    'f_dir': \"{% if 'f_dir' in value_json %}{{ value_json.f_dir.full }}{% endif %}\",\n    'htemp': \"{% if 'htemp' in value_json %}{{ value_json.htemp.raw }}{% endif %}\",\n    'otemp': \"{% if 'otemp' in value_json %}{{ value_json.otemp.raw }}{% endif %}\",\n    'id': \"{% if 'id' in value_json %}{{ value_json.id.raw }}{% endif %}\",\n    'ssid': \"{% if 'ssid' in value_json %}{{ value_json.ssid.raw }}{% endif %}\"\n};\n\nmsg.payload.pow =  {\n    '1': 'En fonction',\n    '0': \"A l'arrêt\"\n};\n\nmsg.payload.mode = {\n    '0': 'Auto (0)',\n    '1': 'Auto (1)',\n    '2': 'Déshumidificateur',\n    '3': 'Froid',\n    '4': 'Chaud',\n    '6': 'Ventilation',\n    '7': 'Auto (7)'\n};\n\nmsg.payload.f_rate = {\n    'A': 'Auto',\n    'B': 'Silence',\n    '3': 'Vitesse 1',\n    '4': 'Vitesse 2',\n    '5': 'Vitesse 3',\n    '6': 'Vitesse 4',\n    '7': 'Vitesse 5',\n};\n\nmsg.payload.f_dir = {\n    '0': 'Fixe',\n    '1': 'Vertical',\n    '2': 'Horizontal',\n    '3': 'Toutes directions'\n};\n\nglobal.set('icons', {\n    'pow': {\n        '0': 'power-off',\n        '1': 'power-cycle'\n    },\n    'mode': {\n        '0': 'refresh-auto',\n        '1': 'refresh-auto',\n        '2': 'water-percent',\n        '3': 'snwoflake',\n        '4': 'fire',\n        '6': 'weather-windy',\n        '7': 'refresh-auto'\n    },\n    'f_rate': {\n        'A': 'refresh-auto',\n        'B': 'leaf',\n        '3': 'fan-minus',\n        '4': 'fan-speed-1',\n        '5': 'fan-speed-2',\n        '6': 'fan-speed-3',\n        '7': 'fan-plus',\n    },\n    'f_dir': {\n        '0': 'arrow-collapse-all',\n        '1': 'arrow-left-right',\n        '2': 'arrow-up-down',\n        '3': 'arrow-all'\n    }\n}, 'memoryOnly');\n\nreturn msg;",
+        "func": "msg.payload.project = 'dknr-daikin';\n\nmsg.payload.hmi = {\n    'detail': 'Piloter',\n    'chart': 'Surveiller',\n    'add': 'Ajouter',\n    'mqtt': 'Configurer'\n};\n\nmsg.payload.label = {\n    'pow': 'Etat',\n    'mode': 'Mode',\n    'stemp': 'Consigne',\n    'f_rate': 'Ventilation',\n    'f_dir': 'Direction',\n    'htemp': 'Interieur',\n    'otemp': 'Exterieur',\n    'curr_day_heat': \"Chaud aujourd'hui\",\n    'prev_1day_heat': 'Chaud hier',\n    'curr_day_cool': \"Froid aujourd'hui\",\n    'prev_1day_cool': 'Froid hier',\n    'id': 'Identifiant',\n    'ssid': 'SSID'\n};\n\nmsg.payload.unit =  {\n    'pow': '',\n    'mode': '',\n    'stemp': '°C',\n    'f_rate': '',\n    'f_dir': '',\n    'htemp': '°C',\n    'otemp': '°C',\n    'id': '',\n    'ssid': ''\n};\n\nmsg.payload.type = {\n    'pow': 'switch',\n    'mode': 'select',\n    'stemp': 'number',\n    'f_rate': 'select',\n    'f_dir': 'select',\n    'htemp': 'sensor',\n    'otemp': 'sensor',\n    'id': 'text',\n    'ssid': 'text'\n};\n\nmsg.payload.pow =  {\n    '1': 'En fonction',\n    '0': \"A l'arrêt\"\n};\n\nmsg.payload.mode = {\n    '0': 'Auto (0)',\n    '1': 'Auto (1)',\n    '2': 'Déshumidificateur',\n    '3': 'Froid',\n    '4': 'Chaud',\n    '6': 'Ventilation',\n    '7': 'Auto (7)'\n};\n\nmsg.payload.f_rate = {\n    'A': 'Auto',\n    'B': 'Silence',\n    '3': 'Vitesse 1',\n    '4': 'Vitesse 2',\n    '5': 'Vitesse 3',\n    '6': 'Vitesse 4',\n    '7': 'Vitesse 5',\n};\n\nmsg.payload.f_dir = {\n    '0': 'Fixe',\n    '1': 'Vertical',\n    '2': 'Horizontal',\n    '3': 'Toutes directions'\n};\n\nmsg.payload.control = {\n    'pow': ['Etat', 'state', 'command', 'enum', '', '0', msg.payload.pow, 'switch', 'measurement', 'none'],\n    'mode': ['Mode', 'mode', 'command', 'enum', '', '0', msg.payload.mode, 'select', 'measurement', 'none'],\n    'stemp': ['Consigne', 'temperatureSetpoint', 'command', 'number', '°C', '19', {}, 'number', 'measurement', 'temperature'],\n    'f_rate': ['Ventilation', 'fanRate', 'command', 'enum', '', 'A', msg.payload.f_rate, 'select', 'measurement', 'none'],\n    'f_dir': ['Direction', 'fanDirection', 'command', 'enum', '', '0', msg.payload.f_dir, 'select', 'measurement', 'none'],\n    'htemp': ['Intérieur', 'temperatureIndoor', 'sensor', 'number', '°C', 0, {}, 'sensor', 'measurement', 'temperature'],\n    'otemp': ['Extérieur', 'temperatureOutdoor', 'sensor', 'number', '°C', 0, {}, 'sensor', 'measurement', 'temperature'],\n};\n\nglobal.set('icons', {\n    'pow': {\n        '0': 'power-off',\n        '1': 'power-cycle'\n    },\n    'mode': {\n        '0': 'refresh-auto',\n        '1': 'refresh-auto',\n        '2': 'water-percent',\n        '3': 'snwoflake',\n        '4': 'fire',\n        '6': 'weather-windy',\n        '7': 'refresh-auto'\n    },\n    'f_rate': {\n        'A': 'refresh-auto',\n        'B': 'leaf',\n        '3': 'fan-minus',\n        '4': 'fan-speed-1',\n        '5': 'fan-speed-2',\n        '6': 'fan-speed-3',\n        '7': 'fan-plus',\n    },\n    'f_dir': {\n        '0': 'arrow-collapse-all',\n        '1': 'arrow-left-right',\n        '2': 'arrow-up-down',\n        '3': 'arrow-all'\n    }\n}, 'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4434,7 +4454,7 @@
         "z": "48135a54600713e8",
         "g": "3dbdfa37c673183e",
         "name": "mqtt",
-        "func": "let control = global.get('controls[\"' + msg.topic +'\"]', 'memoryOnly');\nlet topic = global.get('mqtt.topic', 'default') || '';\n\nif (typeof control === 'object' && \n    topic !== '' && \n    typeof control.id.value === 'string'\n) {\n    let newMsg = {\n        'topic': topic + '/' + control.id.value,\n        'payload': control\n    };\n\n    return newMsg;\n}\n\nreturn;",
+        "func": "let control = global.get('controls[\"' + msg.topic +'\"]', 'memoryOnly');\n\n// old version\nlet old_topic = global.get('mqtt.old_topic', 'default') || '';\nif (typeof control === 'object' && \n    old_topic !== '' && \n    typeof control.id.value === 'string'\n) {\n    let newMsg = {\n        'topic': old_topic + '/' + control.id.value,\n        'payload': control\n    };\n\n    node.send([newMsg]);\n}\n\n// DKNR new version\nconst describe = global.get('describe', 'memoryOnly');\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst source = 'daikin';\nconst sn = control.id?.value || '';\n\nif (topic === '' || sn === '') {\n\n    return;\n}\n\nfor (const k in control) {\n    if (typeof describe.control[k] === 'object' && flow.get('last[\"' + sn + '_' + k + '\"]', 'memoryOnly') !== control[k]['raw']) {\n        flow.set('last[\"' + sn + '_' + k + '\"]', control[k]['raw'], 'memoryOnly');\n        let newMsg = {\n            'topic': [topic, 'get', source, sn, describe.control[k][1]].join('/'),\n            'payload': control[k]['raw']\n        };\n\n        node.send([newMsg]);\n    }\n}\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4490,7 +4510,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "let enabled = global.get('mqtt.enabled', 'default') || false;\nlet discovery = global.get('mqtt.discovery', 'default') || '';\nlet topic = global.get('mqtt.topic', 'default') || '';\n\nif (enabled && discovery.length > 0) {\n    \n    msg.qos = 0;\n    msg.retain = true\n    \n    let describe = global.get('describe', 'memoryOnly') || {};\n    let controls = global.get('controls', 'memoryOnly') || {};\n    for (const host in controls) {\n        let id = controls[host]['id']['raw'];\n        for (const k in describe.discovery_value_template) {\n            let exists = false;\n            msg.topic = discovery + '/' + describe.type[k] + '/daikin/' + id + '_' + k + '/config';\n\n            if (describe.type[k] === 'sensor') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'state_topic': topic + '/' + id,\n                    'value_template': describe.discovery_value_template[k],\n                    'state_class': describe.discovery_state_class[k],\n                    'device_class': describe.discovery_device_class[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'switch') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'payload_off': '0',\n                    'payload_on': '1',\n                    'state_off': '0',\n                    'state_on': '1',\n                    'value_template': describe.discovery_value_template[k],\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'select') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'value_template': describe.discovery_value_template[k],\n                    \"options\": Object.values(describe[k]), // by label\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n            else if (describe.type[k] === 'number') {\n                msg.payload = {\n                    'unique_id': 'daikin_' + id + '_' + k,\n                    'name': describe.label[k],\n                    'value_template': describe.discovery_value_template[k],\n                    'unit_of_measurement': describe.unit[k],\n                    'command_topic': topic + '/set/' + id + '/' + k,\n                    'state_topic': topic + '/' + id,\n                    'min': '10',\n                    'max': '31',\n                    'device': {\n                        'identifiers': [\n                            id\n                        ],\n                        'manufacturer': 'Daikin',\n                        'model': 'daikin_' + id,\n                        'name': 'Daikin ' + id\n                    }\n                };\n\n                exists = true;\n            }\n\n            if (exists === true) {\n                node.send(msg);\n            }\n        }\n    }\n}\n\nreturn;",
+        "func": "const enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst controls = global.get('controls', 'memoryOnly') || {};\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'daikin';\n\nif (!enabled && topic === '') {\n\n    return;\n}\n\n// dknr\nfor (const host in controls) {\n    if (typeof controls[host]['id'] !== 'object') {\n\n        continue;\n    }\n    let id = controls[host]['id']['raw'];\n\n    for (const entity in describe.control) {\n        let dknrMsg = {\n            'topic': [topic, 'discovery', source, id, describe.control[entity][1]].join('/'),\n            'payload': {\n                'name': describe.control[entity][0],\n                'group': describe.control[entity][2],\n                'type': describe.control[entity][3],\n                'unit': describe.control[entity][4],\n                'value': describe.control[entity][5],\n                'options': describe.control[entity][6]\n            },\n            'qos': 0,\n            'retain': true\n        };\n\n        node.send(dknrMsg);\n    }\n}\n\n// ha\nconst discovery = global.get('mqtt.homeassistant', 'default') || '';\nconst old_topic = global.get('mqtt.old_topic', 'default') || '';\nmsg.qos = 0;\nmsg.retain = true\n\nfor (const host in controls) {\n    if (typeof controls[host]['id'] !== 'object') {\n\n        continue;\n    }\n    let id = controls[host]['id']['raw'];\n\n    for (const entity in describe.control) {\n        let key = describe.control[entity][1];\n        msg.topic = discovery + '/' + describe.control[entity][7] + '/daikin/' + id + '_' + key + '/config';\n\n        if (describe.type[entity][7] === 'sensor') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'state_class': describe.control[entity][8],\n                'device_class': describe.control[entity][9],\n                'unit_of_measurement': describe.control[entity][4],\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(msg);\n        }\n        else if (describe.type[entity][7] === 'switch') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'payload_off': '0',\n                'payload_on': '1',\n                'state_off': '0',\n                'state_on': '1',\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(msg);\n        }\n        else if (describe.type[entity][7] === 'select') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                \"options\": Object.values(describe.control[entity][8]), // by label\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(msg);\n        }\n        else if (describe.type[entity][7] === 'number') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'unit_of_measurement': describe.control[entity][4],\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'min': '10',\n                'max': '31',\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(msg);\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5115,6 +5135,53 @@
         "statusType": "auto",
         "x": 460,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "025916ad75d760ec",
+        "type": "inject",
+        "z": "48135a54600713e8",
+        "g": "e28c6dafcd3de09d",
+        "name": "reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 03 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 670,
+        "y": 200,
+        "wires": [
+            [
+                "ba456fafe595af98"
+            ]
+        ]
+    },
+    {
+        "id": "ba456fafe595af98",
+        "type": "function",
+        "z": "48135a54600713e8",
+        "g": "e28c6dafcd3de09d",
+        "name": "data",
+        "func": "flow.set('last', { }, 'memoryOnly');\n\nreturn;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 200,
         "wires": []
     }
 ]
