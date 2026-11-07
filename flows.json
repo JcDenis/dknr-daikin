@@ -979,13 +979,6 @@
                 "rows": null
             },
             {
-                "label": "Old topic",
-                "key": "old_topic",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
                 "label": "Langue des options",
                 "key": "lang",
                 "type": "dropdown",
@@ -1007,9 +1000,8 @@
             "username": "",
             "password": "",
             "homeassistant": "",
-            "old_topic": "",
-            "enabled": false,
-            "lang": "fr"
+            "lang": "",
+            "enabled": false
         },
         "payload": "",
         "submit": "Enregistrer",
@@ -1090,8 +1082,7 @@
         "wires": [
             [
                 "9cf2faedd5b2daed",
-                "afbd97b879d85c83",
-                "d36325316bdbecef"
+                "afbd97b879d85c83"
             ]
         ]
     },
@@ -1257,7 +1248,7 @@
         "z": "4c2feff02c9aebaa",
         "g": "06491d8d5f7b9f7c",
         "name": "app",
-        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', {}, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description.slice(5) || '', // remove \"DKNR \"\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || '',\n        'mdi': 'hvac'\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'enabled': false,\n    'homeassistant': 'homeassistant',\n    'old_topic': 'daikin',\n    'lang': 'fr'\n};\n\nreturn msg;",
+        "func": "delete msg.filename;\n\nif (typeof global.get('describe', 'memoryOnly') !== 'object') {\n    global.set('describe', {}, 'memoryOnly')\n}\n\nlet describe = global.get('describe', 'memoryOnly');\n\nif (typeof msg.payload === 'object') {\n    describe.app = {\n        'title': msg.payload.description.slice(5) || '', // remove \"DKNR \"\n        'version' : msg.payload.version || '',\n        'git': msg.payload.name || '',\n        'mdi': 'hvac'\n    };\n}\n\ndescribe.mqtt = {\n    'host': '',\n    'port': 1883,\n    'username': '',\n    'password': '',\n    'topic': 'dknr',\n    'enabled': false,\n    'homeassistant': 'homeassistant',\n    'lang': 'fr'\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1712,60 +1703,6 @@
                 "d14248a8129a6f85"
             ]
         ]
-    },
-    {
-        "id": "d36325316bdbecef",
-        "type": "function",
-        "z": "4c2feff02c9aebaa",
-        "name": "check old",
-        "func": "msg.broker = {};\n\n// Old topic is used !!!\n\nlet mqtt = global.get('mqtt', 'default');\nif (typeof mqtt == 'object' && mqtt.enabled == true) {\n    if (mqtt.host.length > 0\n        && mqtt.port > 0\n        && mqtt.old_topic.length > 0\n    ) {\n        msg.broker.broker = mqtt.host;\n        msg.broker.port = mqtt.port;\n        if (mqtt.username.length > 0 && mqtt.password.length > 0) {\n            msg.broker.username = mqtt.username;\n            msg.broker.password = mqtt.password;\n        }\n\n        msg.broker.force = true;\n        msg.action = 'connect';\n        node.status({fill:\"green\",shape:\"ring\",text:\"settings ok\"});\n\n        node.send(msg);\n\n        msg.action = 'subscribe';\n        msg.topic = mqtt.old_topic + '/set/#';\n        msg.payload = '';\n\n        node.send(msg);\n\n    } else {\n        global.set('mqtt[\"enabled\"]', false, 'default');\n        node.status({ fill: \"red\", shape: \"ring\", text: \"settings ko\" });\n    }\n} else {\n    msg.action = 'disconnect';\n\n    node.send(msg);\n}\n\nreturn;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 780,
-        "y": 500,
-        "wires": [
-            [
-                "285bd9899c51b19a"
-            ]
-        ]
-    },
-    {
-        "id": "285bd9899c51b19a",
-        "type": "mqtt in",
-        "z": "4c2feff02c9aebaa",
-        "name": "mqtt in old",
-        "topic": "",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "2c5e094fee5ae877",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 960,
-        "y": 500,
-        "wires": [
-            [
-                "f7cbff8f947b2914"
-            ]
-        ]
-    },
-    {
-        "id": "f7cbff8f947b2914",
-        "type": "link out",
-        "z": "4c2feff02c9aebaa",
-        "name": "common - mqtt - old",
-        "mode": "link",
-        "links": [
-            "680ecb72bf927bce"
-        ],
-        "x": 1095,
-        "y": 500,
-        "wires": []
     },
     {
         "id": "a0adaa6d8090b715",
@@ -4528,7 +4465,7 @@
         "z": "48135a54600713e8",
         "g": "3dbdfa37c673183e",
         "name": "mqtt",
-        "func": "let control = global.get('controls[\"' + msg.topic +'\"]', 'memoryOnly');\n\n// old version\nlet old_topic = global.get('mqtt.old_topic', 'default') || '';\nif (typeof control === 'object' && \n    old_topic !== '' && \n    typeof control.id.value === 'string'\n) {\n    let newMsg = {\n        'topic': old_topic + '/' + control.id.value,\n        'payload': control\n    };\n\n    node.send([newMsg]);\n}\n\n// DKNR new version\nconst describe = global.get('describe', 'memoryOnly');\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst source = 'daikin';\nconst sn = control.id?.value || '';\n\nif (topic === '' || sn === '') {\n\n    return;\n}\n\nfor (const k in control) {\n    if (typeof describe.control[k] === 'object' && flow.get('last[\"' + sn + '_' + k + '\"]', 'memoryOnly') !== control[k]['raw']) {\n        flow.set('last[\"' + sn + '_' + k + '\"]', control[k]['raw'], 'memoryOnly');\n        let newMsg = {\n            'topic': [topic, 'get', source, sn, describe.control[k][1]].join('/'),\n            'payload': describe.control[k][3] === 'enum' ? String(control[k]['raw']) : (describe.control[k][3] === 'binary' ? Number(control[k]['raw']) : control[k]['raw'])\n        };\n\n        node.send([newMsg]);\n    }\n}\nreturn;",
+        "func": "let control = global.get('controls[\"' + msg.topic +'\"]', 'memoryOnly');\n\nconst describe = global.get('describe', 'memoryOnly');\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst source = 'daikin';\nconst sn = control.id?.value || '';\n\nif (topic === '' || sn === '') {\n\n    return;\n}\n\nfor (const k in control) {\n    if (typeof describe.control[k] === 'object' && flow.get('last[\"' + sn + '_' + k + '\"]', 'memoryOnly') !== control[k]['raw']) {\n        flow.set('last[\"' + sn + '_' + k + '\"]', control[k]['raw'], 'memoryOnly');\n        let newMsg = {\n            'topic': [topic, 'get', source, sn, describe.control[k][1]].join('/'),\n            'payload': describe.control[k][3] === 'enum' ? String(control[k]['raw']) : (describe.control[k][3] === 'binary' ? Number(control[k]['raw']) : control[k]['raw'])\n        };\n\n        node.send([newMsg]);\n    }\n}\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4584,7 +4521,7 @@
         "z": "48135a54600713e8",
         "g": "c2a4c908aa1cf2e9",
         "name": "discovery",
-        "func": "const enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst controls = global.get('controls', 'memoryOnly') || {};\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'daikin';\n\n// Options labels in the language of the MQTT configuration\nconst lang = global.get('mqtt.lang', 'default') || 'fr';\nconst words = (describe.translate || {})[lang] || {};\nconst tr = s => typeof s === 'string' && typeof words[s] === 'string' ? words[s] : s;\nconst trOptions = o => { let r = {}; for (const k in (o || {})) { r[k] = tr(o[k]); } return r; };\n// Home Assistant template mapping a value with a dictionary\nconst haMap = m => '{{ ' + JSON.stringify(m) + '[value] | default(value) }}';\n\n\nif (!enabled && topic === '') {\n\n    return;\n}\n\n// Source definition\nlet srcMsg = {\n    'topic': [topic, 'discovery', source].join('/'),\n    'payload': describe.app,\n    'qos': 0,\n    'retain': true\n};\n\nnode.send([srcMsg]);\n\n// dknr\nfor (const host in controls) {\n    if (typeof controls[host]['id'] !== 'object') {\n\n        continue;\n    }\n    let id = controls[host]['id']['raw'];\n\n    for (const entity in describe.control) {\n        let dknrMsg = {\n            'topic': [topic, 'discovery', source, id, describe.control[entity][1]].join('/'),\n            'payload': {\n                'name': describe.control[entity][0],\n                'group': describe.control[entity][2],\n                'type': describe.control[entity][3],\n                'unit': describe.control[entity][4],\n                'value': describe.control[entity][5],\n                'options': describe.control[entity][3] === 'binary' ? {} : trOptions(describe.control[entity][6])\n            },\n            'qos': 0,\n            'retain': true\n        };\n\n        node.send(dknrMsg);\n    }\n}\n\n// ha\nconst discovery = global.get('mqtt.homeassistant', 'default') || '';\nconst old_topic = global.get('mqtt.old_topic', 'default') || '';\nmsg.qos = 0;\nmsg.retain = true\n\nfor (const host in controls) {\n    if (typeof controls[host]['id'] !== 'object') {\n\n        continue;\n    }\n    let id = controls[host]['id']['raw'];\n\n    for (const entity in describe.control) {\n        let key = describe.control[entity][1];\n        msg.topic = discovery + '/' + describe.control[entity][7] + '/daikin/' + id + '_' + key + '/config';\n\n        if (describe.control[entity][7] === 'sensor') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'state_class': describe.control[entity][8],\n                'device_class': describe.control[entity][9],\n                'unit_of_measurement': describe.control[entity][4],\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n        else if (describe.control[entity][7] === 'switch') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'payload_off': '0',\n                'payload_on': '1',\n                'state_off': '0',\n                'state_on': '1',\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n        else if (describe.control[entity][7] === 'select') {\n            // by label, DKNR value is the key\n            const options = trOptions(describe.control[entity][6]);\n            let reverse = {};\n            for (const o in options) {\n                reverse[options[o]] = o;\n            }\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'options': Object.values(options),\n                'value_template': haMap(options),\n                'command_template': haMap(reverse),\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n        else if (describe.control[entity][7] === 'number') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'unit_of_measurement': describe.control[entity][4],\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'min': '10',\n                'max': '31',\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n    }\n}\n\nreturn;",
+        "func": "const enabled = global.get('mqtt.enabled', 'default') || false;\nconst topic = global.get('mqtt.topic', 'default') || '';\nconst controls = global.get('controls', 'memoryOnly') || {};\nconst describe = global.get('describe', 'memoryOnly') || {};\nconst source = 'daikin';\n\n// Options labels in the language of the MQTT configuration\nconst lang = global.get('mqtt.lang', 'default') || 'fr';\nconst words = (describe.translate || {})[lang] || {};\nconst tr = s => typeof s === 'string' && typeof words[s] === 'string' ? words[s] : s;\nconst trOptions = o => { let r = {}; for (const k in (o || {})) { r[k] = tr(o[k]); } return r; };\n// Home Assistant template mapping a value with a dictionary\nconst haMap = m => '{{ ' + JSON.stringify(m) + '[value] | default(value) }}';\n\n\nif (!enabled && topic === '') {\n\n    return;\n}\n\n// Source definition\nlet srcMsg = {\n    'topic': [topic, 'discovery', source].join('/'),\n    'payload': describe.app,\n    'qos': 0,\n    'retain': true\n};\n\nnode.send([srcMsg]);\n\n// dknr\nfor (const host in controls) {\n    if (typeof controls[host]['id'] !== 'object') {\n\n        continue;\n    }\n    let id = controls[host]['id']['raw'];\n\n    for (const entity in describe.control) {\n        let dknrMsg = {\n            'topic': [topic, 'discovery', source, id, describe.control[entity][1]].join('/'),\n            'payload': {\n                'name': describe.control[entity][0],\n                'group': describe.control[entity][2],\n                'type': describe.control[entity][3],\n                'unit': describe.control[entity][4],\n                'value': describe.control[entity][5],\n                'options': describe.control[entity][3] === 'binary' ? {} : trOptions(describe.control[entity][6])\n            },\n            'qos': 0,\n            'retain': true\n        };\n\n        node.send(dknrMsg);\n    }\n}\n\n// ha\nconst discovery = global.get('mqtt.homeassistant', 'default') || '';\nmsg.qos = 0;\nmsg.retain = true\n\nfor (const host in controls) {\n    if (typeof controls[host]['id'] !== 'object') {\n\n        continue;\n    }\n    let id = controls[host]['id']['raw'];\n\n    for (const entity in describe.control) {\n        let key = describe.control[entity][1];\n        msg.topic = discovery + '/' + describe.control[entity][7] + '/daikin/' + id + '_' + key + '/config';\n\n        if (describe.control[entity][7] === 'sensor') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'state_class': describe.control[entity][8],\n                'device_class': describe.control[entity][9],\n                'unit_of_measurement': describe.control[entity][4],\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n        else if (describe.control[entity][7] === 'switch') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'payload_off': '0',\n                'payload_on': '1',\n                'state_off': '0',\n                'state_on': '1',\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n        else if (describe.control[entity][7] === 'select') {\n            // by label, DKNR value is the key\n            const options = trOptions(describe.control[entity][6]);\n            let reverse = {};\n            for (const o in options) {\n                reverse[options[o]] = o;\n            }\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'options': Object.values(options),\n                'value_template': haMap(options),\n                'command_template': haMap(reverse),\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n        else if (describe.control[entity][7] === 'number') {\n            msg.payload = {\n                'unique_id': ['dknr', source, id, key].join('_'),\n                'name': describe.control[entity][0],\n                'unit_of_measurement': describe.control[entity][4],\n                'command_topic': [topic, 'set', source, id, key].join('/'),\n                'state_topic': [topic, 'get', source, id, key].join('/'),\n                'min': '10',\n                'max': '31',\n                'device': {\n                    'identifiers': [\n                        id\n                    ],\n                    'manufacturer': 'Daikin',\n                    'model': 'daikin_' + id,\n                    'name': 'Daikin ' + id\n                }\n            };\n\n            node.send(RED.util.cloneMessage(msg));\n        }\n    }\n}\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
